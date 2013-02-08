@@ -1,0 +1,20 @@
+TODO
+====
+
+	Mobile css theme
+	move test outside
+	support for github
+
+Components (BOD)
+==========
+
+	- PDODataADapter
+	- MSSQLDataAdapter
+
+CONTROLS (BOD)
+========
+
+BUGS/ISSUES
+===========
+
+	ENT_QUOTES causes GridViewControls to fail epically

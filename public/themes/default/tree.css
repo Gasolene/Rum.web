@@ -1,0 +1,94 @@
+<!--/*--><![CDATA[/*><!--*/
+
+#side_menu li {
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 19px; /* must be 19px */
+  padding-right: 0px;
+  list-style-type: none;
+}
+
+#side_menu li span img {
+  margin-right: 6px;
+  border: none;
+}
+
+#side_menu li.expandable {
+  background-image: url(vertxical.gif);
+  background-position: 19px;
+  background-repeat: repeat-y;
+}
+
+#side_menu a.expanded {
+  font-size: 18px;
+  padding-right: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(collxapse.gif);
+  background-position: top left;
+  cursor: pointer;
+}
+
+#side_menu a.collapsed {
+  font-size: 18px; /* must be 18px */
+  padding-left: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(expxand.gif);
+  background-position: top left;
+  cursor: pointer;
+}
+
+#side_menu a.node {
+  font-size: 18px;
+  padding-left: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(nodxe.gif);
+  background-position: top left;
+}
+
+#side_menu a.fexpanded {
+  font-size: 18px;
+  padding-left: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(fcoxllapse.gif);
+  background-position: top left;
+  cursor: pointer;
+}
+
+#side_menu a.fcollapsed {
+  font-size: 18px;
+  padding-left: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(fexpand.gif);
+  background-position: top left;
+  cursor: pointer;
+}
+
+#side_menu a.fnode {
+  font-size: 18px;
+  padding-left: 12px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(fnxode.gif);
+  background-position: top left;
+}
+
+#side_menu .folder_expanded {
+  background-image: url(xfolder_opened.gif);
+  width: 16px;
+  height: 15px;
+}
+
+#side_menu .folder_collapsed {
+  background-image: url(fxolder_closed.gif);
+  width: 16px;
+  height: 15px;
+}
+
+
+/*]]>*/-->

@@ -1,0 +1,6 @@
+# Turn Rewrite Engine On
+RewriteEngine Off
+
+# Do not list directory
+
+php_flag short_open_tag off
