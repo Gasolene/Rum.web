@@ -1,1 +1,1 @@
-<p>In progress, please be patient</p>
+<?php $this->form->render() ?>

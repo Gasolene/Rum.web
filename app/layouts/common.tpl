@@ -12,10 +12,9 @@
   <div id="header">
     <ul id="top_menu">
       <li><?=\Rum::link('Home', 'index') ?></li>
-      <li><?=\Rum::link('Tutorials', 'tutorials') ?></li>
-	  <li><?=\Rum::link('User guide', 'user_guide') ?></li>
-      <li><?=\Rum::link('Download', 'download') ?></li>
+      <li><?=\Rum::link('Mailing list', 'community') ?></li>
       <li><?=\Rum::link('Docs', 'docs') ?></li>
+      <li><?=\Rum::link('Download', 'download') ?></li>
     </ul>
   </div>
 
@@ -29,6 +28,18 @@
   </div>
 
 </div>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38347871-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

@@ -19,8 +19,8 @@
 
 <p>
 	<a href="<?=\Rum::baseURI() ?>/downloads/current_release/php_rum.tar">Download the latest version</a> (Version <?=System\Base\FRAMEWORK_BUILD_VERSION ?>)<br />
-	<a href="<?=\Rum::baseURI() ?>/downloads/tutorials/hello_world.tar">Download the hello world application</a><br />
-	<?=\Rum::link('old versions', 'download/archive') ?><br />
+	<a href="<?=\Rum::baseURI() ?>/downloads/current_release/hello_world.tar">Download the hello world application</a><br />
+	<?=\Rum::link('old versions', 'downloads/archive') ?><br />
 </p>
 
 <p><a href="../docs/CHANGELOG.txt">See change log</a></p>
