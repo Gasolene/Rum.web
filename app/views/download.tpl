@@ -18,15 +18,15 @@
 <p>The latest release includes all current fixes and security patches.
 
 <p>
-	<a href="<?=\Rum::baseURI() ?>/downloads/current_release/php_rum.tar">Download the latest version</a> (Version <?=System\Base\FRAMEWORK_BUILD_VERSION ?>)<br />
-	<a href="<?=\Rum::baseURI() ?>/downloads/current_release/hello_world.tar">Download the hello world application</a><br />
-	<?=\Rum::link('old versions', 'downloads/archive') ?><br />
+	<a href="<?=\Rum::baseURI() ?>/downloads/release/current/php_rum.tar">Download the latest version</a> (Version <?=System\Base\FRAMEWORK_BUILD_VERSION ?>)<br />
+	<a href="<?=\Rum::baseURI() ?>/downloads/demo/hello_world.tar">Download the hello world application</a><br />
+	<?=\Rum::link('old versions', 'downloads') ?><br />
 </p>
 
 <p><a href="../docs/CHANGELOG.txt">See change log</a></p>
 
 <h3>Windows users...</h3>
-<p>You will need to download and unpack these 3 stand alone executables in your application root directory in order to use the command line tools: 
+<p>You will need to download and unpack these 3 stand alone executables in your application root directory in order to use the command line tools (optional): 
 <a target="_blank" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Putty.exe</a>,
 <a target="_blank" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Plink.exe</a>, and
 <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/unzip.htm">Unzip.exe</a></p>

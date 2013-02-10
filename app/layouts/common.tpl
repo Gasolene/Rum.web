@@ -13,7 +13,7 @@
     <ul id="top_menu">
       <li><?=\Rum::link('Home', 'index') ?></li>
       <li><?=\Rum::link('Mailing list', 'community') ?></li>
-      <li><?=\Rum::link('Docs', 'docs') ?></li>
+      <li><?=\Rum::link('Docs', 'documentation') ?></li>
       <li><?=\Rum::link('Download', 'download') ?></li>
     </ul>
   </div>

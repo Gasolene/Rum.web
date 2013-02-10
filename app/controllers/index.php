@@ -17,7 +17,7 @@
          */
         public function onPageInit($sender, $args)
         {
-                $this->registerMenuItem('Docs', 'docs');
+                $this->registerMenuItem('Docs', 'documentation');
                 $this->registerMenuItem('Mailing list', 'community');
                 $this->registerMenuItem('Download', 'download');
         }
