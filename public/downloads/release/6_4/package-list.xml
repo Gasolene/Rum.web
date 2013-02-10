@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<package-list version="6.4">
+  <package
+    name = "PHPRum"
+    id = "rum"
+    author = "Darnell Shinbine"
+    version = "6.4"
+    path = "http://php-rum.com/downloads/release/6_4/php_rum_v6_4.zip"
+    dest = "__SYSTEM_PATH__" />
+  <package
+    name = "Calendar"
+    id = "calendar"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/calendar.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "CKEditor"
+    id = "ckeditor"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/ckeditor.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "CommonControls"
+    id = "commoncontrols"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/commoncontrols.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "DatePicker"
+    id = "datepicker"
+    author = ""
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/datepicker.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "FCKEditor"
+    id = "fckeditor"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/fckeditor.zip"
+    dest = "__PLUGINS_PATH__" />
+<!--
+  <package
+    name = "Gatewayadapter"
+    id = "gatewayadapter"
+    author = ""
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/gatewayadapter.zip"
+    dest = "__PLUGINS_PATH__" />-->
+  <package
+    name = "GD"
+    id = "gd"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/gd.zip"
+    dest = "__PLUGINS_PATH__" />
+<!--
+  <package
+    name = "ImageCropper"
+    id = "imagecropper"
+    author = ""
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/imagecropper.zip"
+    dest = "__PLUGINS_PATH__" />-->
+  <package
+    name = "JQuery"
+    id = "jquery"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/jquery.zip"
+    dest = "__PLUGINS_PATH__" />
+<!--
+  <package
+    name = "PickADate"
+    id = "pickadate"
+    author = ""
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/pickadate.zip"
+    dest = "__PLUGINS_PATH__" />-->
+  <package
+    name = "PickList"
+    id = "picklist"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/picklist.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "RSS"
+    id = "rss"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/rss.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "SuggestBox"
+    id = "suggestbox"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/suggestbox.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "TinyMCE"
+    id = "tinymce"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/tinymce.zip"
+    dest = "__PLUGINS_PATH__" />
+  <package
+    name = "WebBot"
+    id = "webbot"
+    author = "Darnell Shinbine"
+    version = "1.0"
+    path = "http://php-rum.com/downloads/release/6_4/plugins/webbot.zip"
+    dest = "__PLUGINS_PATH__" />
+</package-list>
