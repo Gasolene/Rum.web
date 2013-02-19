@@ -85,7 +85,7 @@
 
 				// download package
 				echo "downloading package {$meta["path"]}...".PHP_EOL;
-				eval("\$dest=".$meta["dest"].".'/{$meta["id"]}';");
+				eval("\$dest=".$meta["dest"].";");
 
 				if(!file_exists($dest)) {
 					mkdir($dest);
