@@ -2,7 +2,7 @@
     <div id="side_bar">
       <ul id="side_menu">
         <?php foreach($menu_items as $title => $page) : ?>
-        <li><?=\Rum::link($title, $page) ?></li>
+        <li><a href="<?=$page?>"><?=$title?></a></li>
         <?php endforeach; ?>
       </ul>
     </div>
