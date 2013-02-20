@@ -23,5 +23,3 @@ RewriteRule (.*)/(.*)?$ index.php?page=$1 [L,QSA]
 # Condition /page?vars
 #RewriteCond %{REQUEST_URI} /(.*)$
 #RewriteRule (.*)?$ index.php?page=$1 [L,QSA]
-
-php_flag short_open_tag on

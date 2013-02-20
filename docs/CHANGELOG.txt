@@ -3,8 +3,26 @@ Change log
 
 1. Version History
 
-version 1.0.14-beta - 01.17.13
+version 6.4.15-beta - 02.20.13
+	- added command line package manager "get" (beta)
+	- fixed bug in model make script when not reporting correct error message if table doesn't exist
+	- changed make script no longer needs /app/config/make/config.php
+	- added /app/config/dev.xml
+	- added event LoginFormSubmitEvent
+	- added RESTWebService
+	- changed WebServiceAuthentication
+	- fixed bug in WebApplication where replacing PHP session id even when cookieless session is false
+	- fixed bug in SOAPWebService::handle() where returning the handle
+	- fixed bug in model make script no longer determines many to many relationships
+	- fixed bug in migrate when migrating down from first version
+	- fixed bug in TestCastBase when building a new schema
+	- fixed bug in Model make script where not throwing Exception for missing argument
+	- fixed bug in Deploy script when deploying via SCP on linux
+
+version 6.4.14-beta - 01.21.13
 	- fixed bug in GridView::filters when setting filter values
+	- fixed bug in SSHClient where not specifying port correctly
+	- fixed bug in migrations where migrate was failing if no migrations were defined
 	- changed GridView::filters to support associative arrays
 	- added support for js scripts in themes
 	- fixed bug in ColumnCompare where string sort wasn't trimming
@@ -13,33 +31,33 @@ version 1.0.14-beta - 01.17.13
 	- fixed bug where debug panel opening on load without cookie set
 	- changed plugin assets now live with plugin class files
 
-version 1.0.13-beta - 11.16.12
+version 6.4.13-beta - 11.16.12
 	- fixed bug in GridView::findColumn() where replacing the native indexOf() behavior
 	- changed WebControlBase::getHTMLControlIdString() to WebControlBase::getHTMLControlId
 	- removed default login message from LoginForm
 	- renamed WebControlBase::attachDataSource() to WebControlBase::bind()
 
-version 1.0.12-beta - 11.12.12
+version 6.4.12-beta - 11.12.12
 	- changed Form::autoFocus default is now false
 	- fixed bug in ColumnSchema::__get() when getting object vars instead of class vars
 	- added GridView::findColumn()
 	- fixed bug in debug.inc where outputting args as string
 
-version 1.0.11-beta - 10.29.12
+version 6.4.11-beta - 10.29.12
 	- fixed bug Runtime Error: Uncaught exception  'System\Base\BadMemberCallException' with message 'call to undefined  property isAjaxPostBack in Gasonic\Controllers\SaveHandler
 	- fixed bug in WebApplicationBase when launching exception window
 	- added Rum::clearMessages() removes any displayed messages
 	- fixed bug in Tester Strict Standards: Only variables should be passed by reference in C:\xampp\htdocs\DAD\system\test\tester.class.php on line 61
 	- fixed bug in RequiredValidator where now allowing '0'
 
-version 1.0.10-beta - 09.21.12
+version 6.4.10-beta - 09.21.12
 	- added EnumValidator
 	- fixed bug in CheckBox where posting incorrect data on ajaxPostBack
 	- fixed bug in GridViewDropDownMenu where not escaping
 	- fixed bug in ActiveRecordBase::all() when no pkey defined
 	- performance optimized MysqliDataAdapter::query() and MysqliDataAdapter::fill()
 
-version 1.0.9-beta - 08.16.12
+version 6.4.9-beta - 08.16.12
 	- changed GridView to support embedding WebControls in the footer template (not 100% backwards compatible)
 	- fixed bug in GridView controls where form post backs were raising the wrong events
 	- added new make script gridviewcontroller
@@ -48,7 +66,7 @@ version 1.0.9-beta - 08.16.12
 	- added support for ajax exception handling
 	- added events for ReportView
 
-version 1.0.8-beta - 08.09.12
+version 6.4.8-beta - 08.09.12
 	- performance enhancement added flag DEBUG_BACKTRACE_IGNORE_ARGS to error trapping to save memory
 	- performance enhancement in DataAdapter when keeping stats no longer creates new Timer object
 	- fixed bug where tooltip attribute was ignored in some controls
@@ -61,7 +79,7 @@ version 1.0.8-beta - 08.09.12
 	- removed abstract ControllerBase::requestProcessor() (not backwards compatible)
 	- patched security exploit in Form where honeypot could be exploited, hiddenField now defaults to false
 
-version 1.0.7-beta - 07.26.12
+version 6.4.7-beta - 07.26.12
 	- deprecated MySQLDataAdapter, use MySQLiDataAdapter instead
 	- added security and mail logging
 	- added MySQLiDataAdapter
@@ -84,7 +102,7 @@ version 1.0.7-beta - 07.26.12
 	- fixed bug where Javascript Rum.fadeOut() onclick event could fire multiple times
 	- fixed bug in TestCaseBase where FileLoadException not found
 
-version 1.0.6-beta - 07.23.12
+version 6.4.6-beta - 07.23.12
 	- fixed bug where GridViewDropMenu using key instead of value
 	- fixed bug in Build::clean() when no files are matched
 	- fixed bug in Migrations where not setting column type to real
@@ -98,7 +116,7 @@ version 1.0.6-beta - 07.23.12
 	- performance enhancement DataAdapter::getSchema() is now cached
 	- performance enhancement in ActiveRecordBase::form() when looping mappings for all columns instead of ref columns
 
-version 1.0.5-beta - 07.13.12
+version 6.4.5-beta - 07.13.12
 	- fixed bug in Roles where not returning roles for user when membership role explicitly defined per user
 	- fixed bug in Authentication class where not handling account suspended flag properly
 	- fixed bug when forwarding params using the request method
@@ -107,7 +125,7 @@ version 1.0.5-beta - 07.13.12
 	- added error handling for GridView eval() statements
 	- added properties GridViewColumn::onmouseover, GridViewColumn::onmouseout, GridViewColumn::onclick, GridViewColumn::ondblclick
 
-version 1.0.4-beta - 07.05.12
+version 6.4.4-beta - 07.05.12
 	- re-factored all \htmlentities into \Rum::escape()
 	- added bool WebControlBase::escapeOutput
 	- added bool GridViewControlBase::escapeOutput
@@ -115,7 +133,7 @@ version 1.0.4-beta - 07.05.12
 	- fixed bug in ActiveRecordBase::form() when key and foreign key don't match
 	- fixed bug in ListControlBase where allowing non DataSet items to be attached as a DataSource
 
-version 1.0.3-beta - 06.22.12
+version 6.4.3-beta - 06.22.12
 	- changed make Model script so many to many relationships can be mapped with more than 2 columns
 	- fixed bug where Form not preserving array elements in request
 	- added warning count to debug toolbar
@@ -124,7 +142,7 @@ version 1.0.3-beta - 06.22.12
 	- fixed major performance bug in MySQLDataAdapter::buildTableSchema() where not selecting 0 rows
 	- fixed bug in UniqueValidator where triggering warning
 
-version 1.0.2-beta - 05.25.12
+version 6.4.2-beta - 05.25.12
 	- added exception when refreshing WebControl if no data source
 	- fixed bug in make model script where not setting filename case correctly
 	- fixed bug ApplicationBase when setting db Cache or Logger object
@@ -134,7 +152,7 @@ version 1.0.2-beta - 05.25.12
 	- renamed array ActiveRecordBase::associations to array ActiveRecordBase::relationships (not backwards compatible)
 	- fixed bug where debug dump triggering invalid multibyte sequence in argument
 
-version 1.0.1-beta - 05.04.12
+version 6.4.1-beta - 05.04.12
 	- changed TextBox::onAjaxPostBack now sends postback on event onkeyup using the time delay
 	- changed WebApplicationBase::getPageURI() can now handle array parameters
 	- added listcontroller and formcontroller scripts to make
@@ -175,7 +193,7 @@ version 1.0.1-beta - 05.04.12
 	- changed ActiveRecordBase when mapping many to many relationships in tables with more than 2 columns - no longer auto mapped
 	- changed Fieldset and Form now render fieldset legend with span element
 
-version 1.0.0-beta-1.03 - 04.11.12
+version 6.4.0-beta-1.03 - 04.11.12
 	- added AppConfiguraiton::charset
 	- added ApplicationBase::charset
 	- added option /dev/build now rebuilds all build files needed by the application
@@ -194,7 +212,7 @@ version 1.0.0-beta-1.03 - 04.11.12
 	- removed PageView::lang, PageView::xmls and PageView::title
 	- changed LoginForm now uses ApplicationBase::mailClient to send mail
 
-version 1.0.0-beta-1.02a - 04.05.12
+version 6.4.0-beta-1.02a - 04.05.12
 	- added debug toolbar
 	- added controls Label and HyperLink
 	- added confirmation message parameter to GridViewButton class
@@ -217,7 +235,7 @@ version 1.0.0-beta-1.02a - 04.05.12
 	- fixed bug in FormsAuthentication where not sending expiration for _secret
 	- fixed bug in GridView when sending line breaks to the browser
 
-version 1.0.0-beta-1.02 - 03.01.12
+version 6.4.0-beta-1.02 - 03.01.12
 	- changed core build files now handled separately from cache files
 	- added class Build to handle core build files
 	- changed quick commands now prefixed with /dev e.g. /dev/clean
@@ -230,7 +248,7 @@ version 1.0.0-beta-1.02 - 03.01.12
 	- fixed bug in GridViewButton when adding unneeded slashes when sending post requests
 	- ported version to PHP5.2.17
 
-version 1.0.0-beta-1.01 - 01.10.12
+version 6.4.0-beta-1.01 - 01.10.12
 	- changed XMLParser::parse() now removes XML declaration
 	- renamed ActiveRecordBase::beforeAdd() to ActiveRecordBase::beforeCreate()
 	- renamed ActiveRecordBase::afterAdd() to ActiveRecordBase::afterCreate()
@@ -256,7 +274,7 @@ version 1.0.0-beta-1.01 - 01.10.12
 	- fixed Authentication to ensure salt is appied in the correct order
 	- fixed bug where referencing wrong namespace for FileNotFoundException
 
-version 1.0.0-beta-1 - 10.11.11
+version 6.4.0-beta-1 - 10.11.11
 	- major upgrade - rename and reset version to Rum 1.0-beta
 	- major change to ActiveRecordBase mapping
 		- added method Form ActiveRecordBase::form()

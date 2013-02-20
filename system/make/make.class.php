@@ -10,12 +10,6 @@
 
 
 	/**
-	 * include configuration script
-	 */
-	include __ROOT__ . '/app/config/make/config.php';
-
-
-	/**
 	 * deplomyent script
 	 *
 	 * @package			PHPRum
@@ -23,6 +17,12 @@
 	 */
 	final class Make extends ConsoleApplicationBase
 	{
+		/**
+		 * namespace
+		 * @var string
+		 */
+		static $namespace = '';
+
 		/**
 		 * execute the application
 		 *
@@ -34,9 +34,14 @@
 		protected function execute()
 		{
 			global $argc, $argv;
+			$options = $this->getOptions($argc, $argv);
+			
+			$xmlParser = new \System\XML\XMLParser();
+			$dev = $xmlParser->parse(file_get_contents(__ROOT__ . '/app/config/dev.xml'));
+			self::$namespace = $dev["namespace"];
+
 			if(isset($argv[1]) && isset($argv[2]) && \strpos($argv[1], "-")!==0 && \strpos($argv[2], "-")!==0)
 			{
-				$options = $this->getOptions($argc, $argv);
 				$script = $argv[1];
 				$target = $argv[2];
 
@@ -56,7 +61,7 @@
 					}
 					else
 					{
-						throw new \System\InvalidOperationException( "deployment script `$makeScript` is not defined" );
+						throw new \System\Base\InvalidOperationException( "deployment script `$makeScript` is not defined" );
 					}
 				}
 				else
@@ -66,7 +71,7 @@
 			}
 			else
 			{
-				throw new \System\InvalidArgumentException( "you must specify the script and target" );
+				throw new \System\Base\InvalidArgumentException( "you must specify the script and target" );
 			}
 		}
 

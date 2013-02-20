@@ -41,9 +41,9 @@
 			$path = substr($target, 0, strrpos($target, '/'));
 
 			$className = ucwords(substr(strrchr('/'.$target, '/'), 1));
-			$baseNamespace = RootNamespace;
-			$namespace = str_replace('/', '\\', RootNamespace . self::ControllerNamespace . ($path?'\\'.ucwords($path):''));
-			$baseClassName = '\\'.RootNamespace.self::DefaultBaseController;
+			$baseNamespace = Make::$namespace;
+			$namespace = str_replace('/', '\\', $baseNamespace . self::ControllerNamespace . ($path?'\\'.ucwords($path):''));
+			$baseClassName = '\\'.$baseNamespace.self::DefaultBaseController;
 			$pageURI = $target;
 
 			$controllerPath = \System\Base\ApplicationBase::getInstance()->config->controllers . '/' . strtolower($target) . __CONTROLLER_EXTENSION__;

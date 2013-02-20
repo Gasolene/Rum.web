@@ -32,17 +32,18 @@
 		 */
 		public function make($target, array $options = array())
 		{
+			$baseNamespace = Make::$namespace;
 			$modelPath = __MODELS_PATH__ . '/' . strtolower( $target ) . __CLASS_EXTENSION__;
 			$modelTestCasePath = __UNIT_TESTS_PATH__ . '/' . strtolower($target . __TESTCASE_SUFFIX__) . __CLASS_EXTENSION__;
 			$modelFixturePath = __FIXTURES_PATH__ . '/' . strtolower($target) . '.xml';
 
 			$modelTemplate = file_get_contents(\System\Base\ApplicationBase::getInstance()->config->root . "/system/make/templates/model.tpl");
-			$modelTemplate = str_replace("<Namespace>", RootNamespace . self::ModelNamespace, $modelTemplate);
+			$modelTemplate = str_replace("<Namespace>", $baseNamespace . self::ModelNamespace, $modelTemplate);
 			$modelTemplate = str_replace("<ClassName>", ucwords($target), $modelTemplate);
 
 			$modelTestCaseTemplate = file_get_contents(\System\Base\ApplicationBase::getInstance()->config->root . "/system/make/templates/modeltestcase.tpl");
-			$modelTestCaseTemplate = str_replace("<Namespace>", RootNamespace . self::ModelNamespace, $modelTestCaseTemplate);
-			$modelTestCaseTemplate = str_replace("<BaseNamespace>", RootNamespace, $modelTestCaseTemplate);
+			$modelTestCaseTemplate = str_replace("<Namespace>", $baseNamespace . self::ModelNamespace, $modelTestCaseTemplate);
+			$modelTestCaseTemplate = str_replace("<BaseNamespace>", $baseNamespace, $modelTestCaseTemplate);
 			$modelTestCaseTemplate = str_replace("<ClassName>", ucwords($target), $modelTestCaseTemplate);
 
 			/**
@@ -52,7 +53,7 @@
 
 			if(is_null($da))
 			{
-				throw new \System\Base\InvalidOperationException("AppServlet::dataAdapter is null");
+				throw new \System\Base\InvalidOperationException("No DataAdapter configured");
 			}
 
 			$schema = $da->getSchema();
@@ -74,7 +75,7 @@
 
 			if( !$table )
 			{
-				throw new \System\Base\InvalidOperationException("table `{$table}` does not exist in DataAdapter");
+				throw new \System\Base\InvalidOperationException("table `{$target}` not found in DataAdapter");
 			}
 
 			// Get table schema
@@ -269,7 +270,7 @@
 			foreach( $schema->tableSchemas as $ftableSchema )
 			{
 				// get namespace of this object
-				$namespace = RootNamespace . self::ModelNamespace;
+				$namespace = Make::$namespace . self::ModelNamespace;
 
 				// set true another table has pkey of this table
 				$pKeyFound = false;
@@ -340,27 +341,30 @@
 							// loop through all foreign tables
 							foreach( $schema->tableSchemas as $ftableSchema2 )
 							{
-								// ignore self
-								if( $ftableSchema->name != $ftableSchema2->name )
+								if( count( $ftableSchema->columnNames ) === 2 )
 								{
-									// if foreign table has primary key?
-									if( isset( $pkeys[$ftableSchema2->name] ))
+									// ignore self
+									if( $ftableSchema->name != $ftableSchema2->name )
 									{
-										// if foreign tables key = tables pkey
-										if( $pkeys[$ftableSchema2->name] === $columnSchema->name )
+										// if foreign table has primary key?
+										if( isset( $pkeys[$ftableSchema2->name] ))
 										{
-											$type = $namespace . '\\' . ucwords( $ftableSchema2->name );
+											// if foreign tables key = tables pkey
+											if( $pkeys[$ftableSchema2->name] === $columnSchema->name )
+											{
+												$type = $namespace . '\\' . ucwords( $ftableSchema2->name );
 
-											// found pkey of another table in foreign table
-											$mapping = array(
-												  'relationship' => \System\ActiveRecord\RelationshipType::HasManyAndBelongsTo()->__toString()
-												, 'type' => $type
-												, 'table' => $ftableSchema->name
-												, 'columnRef' => $pkeys[$ftableSchema2->name]
-												, 'columnKey' => $pkey
-												, 'notNull' => $columnSchema->notNull );
+												// found pkey of another table in foreign table
+												$mapping = array(
+													  'relationship' => \System\ActiveRecord\RelationshipType::HasManyAndBelongsTo()->__toString()
+													, 'type' => $type
+													, 'table' => $ftableSchema->name
+													, 'columnRef' => $pkeys[$ftableSchema2->name]
+													, 'columnKey' => $pkey
+													, 'notNull' => $columnSchema->notNull );
 
-											$mappings[] = $mapping;
+												//$mappings[] = $mapping;
+											}
 										}
 									}
 								}

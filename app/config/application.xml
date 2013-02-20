@@ -8,7 +8,7 @@
  @lang (default=en): the default language of the application
  @charset (default=utf-8): the default charset of the application
 -->
-<application                   state = "debug"
+<application                   state = "on"
                                 lang = "en">
 
   <!--
@@ -17,10 +17,7 @@
      @key: optional name of the key to add
      @value: optional value of the key to add
   -->
-  <app-settings>
-    <add                         key = "min_php_ver"
-                               value = "5.3.8" />
-  </app-settings>
+  <app-settings />
 
   <!--
    pages specification
@@ -89,7 +86,7 @@
      @realm (default=MyRealm): the name of the Http Realm
    @forms
      @loginpage (default=login): the login page controller
-     @cookienam (default=__AUTHCOOKIE): the name of the authentication cookie
+     @cookiename (default=__AUTHCOOKIE): the name of the authentication cookie
      @secret: specifies the secret when setting auth cookies
    @credentials
      @user

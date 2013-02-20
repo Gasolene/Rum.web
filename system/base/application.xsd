@@ -11,7 +11,7 @@
       <xs:element ref="session" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="cache" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="authentication" minOccurs="0" maxOccurs="1"/>
-	  <xs:element ref="authorization" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="authorization" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="data-source" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="errors" minOccurs="0" maxOccurs="1"/>
     </xs:all>

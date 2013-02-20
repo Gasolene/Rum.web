@@ -178,11 +178,6 @@
 	if( !defined( '__PAGE_REQUEST_PARAMETER__' ))		define( '__PAGE_REQUEST_PARAMETER__',		'page' );
 
 	/**
-	 * specifies the asset request parameter
-	 */
-	if( !defined( '__ASSET_REQUEST_PARAMETER__' ))		define( '__ASSET_REQUEST_PARAMETER__',		'asset' );
-
-	/**
 	 * specifies the async request parameter
 	 */
 	if( !defined( '__ASYNC_REQUEST_PARAMETER__' ))		define( '__ASYNC_REQUEST_PARAMETER__',		'async' );

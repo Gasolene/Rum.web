@@ -6,5 +6,5 @@
  @repo: the path to the repository, required for the get command
 -->
 <dev
-  namespace  = "PHPRum"
+  namespace  = "MyApp"
   repository = "http://php-rum.com/downloads/release/6_4/package-list.xml" />

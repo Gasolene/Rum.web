@@ -890,15 +890,22 @@ ExceptionWindow.document.write(\"".addslashes(str_replace(array("\r\n", "\r", "\
 		 */
 		private function startSession()
 		{
-			if( isset( HTTPRequest::$post['PHPSESSID'] ))
+			if( ApplicationBase::getInstance()->config->cookielessSession )
 			{
-				$this->session->start( HTTPRequest::$post['PHPSESSID'] );
-				unset( HTTPRequest::$post['PHPSESSID'] );
-			}
-			elseif( isset( HTTPRequest::$get['PHPSESSID'] ))
-			{
-				$this->session->start( HTTPRequest::$get['PHPSESSID'] );
-				unset( HTTPRequest::$get['PHPSESSID'] );
+				if( isset( HTTPRequest::$post['PHPSESSID'] ))
+				{
+					$this->session->start( HTTPRequest::$post['PHPSESSID'] );
+					unset( HTTPRequest::$post['PHPSESSID'] );
+				}
+				elseif( isset( HTTPRequest::$get['PHPSESSID'] ))
+				{
+					$this->session->start( HTTPRequest::$get['PHPSESSID'] );
+					unset( HTTPRequest::$get['PHPSESSID'] );
+				}
+				else
+				{
+					$this->session->start();
+				}
 			}
 			else
 			{
@@ -928,11 +935,6 @@ ExceptionWindow.document.write(\"".addslashes(str_replace(array("\r\n", "\r", "\
 		{
 			if(isset($request->get["page"]) && isset($request->get["id"]))
 			{
-				if($request->get["page"]==__ASSET_REQUEST_PARAMETER__ && isset($request->get["res"]))
-				{
-					\System\Web\HTTPResponse::write(file_get_contents(__PLUGINS_PATH__ . '/' . $request->get["id"] . '/assets/' . str_replace(array('..','/'),'',$request->get["res"])));
-					exit;
-				}
 				if($_SERVER[__ENV_PARAMETER__]==__DEV_ENV__||$_SERVER[__ENV_PARAMETER__]==__TEST_ENV__)
 				{
 					if($request->get["page"]=='dev' && ($request->get["id"]=="clean" || $request->get["id"]=="build"))
