@@ -11,7 +11,7 @@
 	 * @author			Darnell Shinbine
 	 * @copyright		Copyright (c) 2011
 	 */
-	namespace MyApp;
+	namespace PHPRum;
 
 	/**
 	 * load framework and application
@@ -19,5 +19,5 @@
 	include '../system/base/rum.php';
 
 	// create instance of the application and run!!!
-	\System\Base\ApplicationBase::getInstance(new MyApp())->run();
+	\System\Base\ApplicationBase::getInstance(new Main())->run();
 ?>

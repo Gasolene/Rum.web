@@ -17,9 +17,9 @@
          */
         public function onPageInit($sender, $args)
         {
-                $this->registerMenuItem('Docs', 'documentation');
-                $this->registerMenuItem('Mailing list', 'community');
-                $this->registerMenuItem('Download', 'download');
+                $this->registerMenuItem('Docs', \Rum::baseURI().'/documentation/');
+                $this->registerMenuItem('Mailing list', \Rum::baseURI().'/community/');
+                $this->registerMenuItem('Download', \Rum::baseURI().'/download/');
         }
     }
 ?>
