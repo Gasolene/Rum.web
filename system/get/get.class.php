@@ -85,7 +85,6 @@
 
 				// download package
 				echo "downloading package {$meta["path"]}...".PHP_EOL;
-				$src = $meta["src"];
 				eval("\$dest=".$meta["dest"].";");
 
 				if(!file_exists($dest)) {
