@@ -25,12 +25,10 @@
 		protected $port=2222;
 		// username
 		protected $username="root";
-		// password
-		protected $password="";
 		// remote home path
 		protected $home_path="/var/www/html/php-rum.com";
 		// local/svn repository
-		protected $repository_path="http://localhost/repos/venus/rum";
+		protected $repository_path="git@github.com:Gasolene/Rum.web.git";
 		// remote env
 		protected $env="prod";
 		// max releases
@@ -65,26 +63,18 @@
 			$this->run("echo deploying to {$this->release_path}");
 
 			// export application
-			$this->run("svn --quiet export {$this->repository_path}/app {$this->release_path}/app");
-			$this->run("svn --quiet export {$this->repository_path}/public {$this->release_path}/public");
-			$this->run("svn --quiet export {$this->repository_path}/system {$this->release_path}/system");
+			$this->run("git clone --depth 1 {$this->repository_path} {$this->release_path}");
 
 			// create tmp folders
 			$this->run("mkdir {$this->release_path}/.cache");
 			$this->run("mkdir {$this->release_path}/.build");
-			$this->run("mkdir {$this->release_path}/.tmp");
 			$this->run("chmod 775 {$this->release_path}/.cache");
 			$this->run("chmod 775 {$this->release_path}/.build");
-			$this->run("chmod 775 {$this->release_path}/.tmp");
 			$this->run("chown apache:apache {$this->home_path} -R");
 
 			// perform database migrations
-			$this->run("svn --quiet export {$this->repository_path}/rum {$this->release_path}/rum");
-			$this->run("svn --quiet export {$this->repository_path}/migrate {$this->release_path}/migrate");
 			$this->run("php {$this->release_path}/migrate {$this->env}");
 			$this->run("php {$this->release_path}/migrate {$this->env} version > {$this->release_path}/version");
-			$this->run("rm -f -R {$this->release_path}/rum");
-			$this->run("rm -f {$this->release_path}/migrate");
 
 			// sym link to logs
 			$this->run("ln -s {$this->home_path}/shared/logs {$this->release_path}/logs");
