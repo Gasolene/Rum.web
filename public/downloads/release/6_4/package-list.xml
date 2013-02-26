@@ -6,7 +6,7 @@
     id = "rum"
     author = "Darnell Shinbine"
     version = "6.4"
-    path = "http://php-rum.com/downloads/release/6_4/php_rum_v6_4.zip"
+    path = "http://php-rum.com/downloads/release/6_4/php_rum_v6_4rc1.zip"
     dest = "__ROOT__" />
   <package
     name = "Calendar"
