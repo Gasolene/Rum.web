@@ -3,9 +3,8 @@ TODO
 
 	[Due in 6.5.0]
 	Compress assets (one time manually?)
-	Reduce HTML output
-	Clean PDO/MSSQL
 	Integrate with JQuery
+	Reduce HTML output
 
 	Maybe:Compress themes using tool?
 
