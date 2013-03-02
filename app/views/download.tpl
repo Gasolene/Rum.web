@@ -18,7 +18,7 @@
 <p>The latest release includes all current fixes and security patches.
 
 <p>
-	<a href="<?=\Rum::baseURI() ?>/downloads/release/current/php_rum.tar">Download the latest version</a> (Version <?=System\Base\FRAMEWORK_BUILD_VERSION ?>)<br />
+	<a href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download the latest version</a> (Version <?=\Rum::config()->appsettings["current_version_name"]?>)<br />
 	<a href="<?=\Rum::baseURI() ?>/downloads/demo/hello_world.tar">Download the hello world application</a><br />
 	<?=\Rum::link('old versions', 'downloads') ?><br />
 </p>

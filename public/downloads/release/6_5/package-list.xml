@@ -5,8 +5,8 @@
     name = "PHPRum"
     id = "rum"
     author = "Darnell Shinbine"
-    version = "6.4"
-    path = "http://php-rum.com/downloads/release/6_5/php_rum_v6_5.zip"
+    version = "6.5"
+    path = "http://php-rum.com/downloads/release/6_5/php_rum_v6_5_update.zip"
     dest = "__SYSTEM_PATH__" />
   <package
     name = "Calendar"
