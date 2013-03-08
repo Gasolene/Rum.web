@@ -6,27 +6,36 @@ Rum was designed conceptually from the ground up to mimic the architecture of a 
 
 <p>Rum is a full stack framework and has been in development since 2003 and is released under the GNU license.</p>
 
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3156769674383552";
+/* Leaderboard */
+google_ad_slot = "9867022220";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
 <h1>Features</h1>
 
 <div class="box">
 <div class="left">
 <ul>
 	<li>Light weight</li>
-	<li>No configuration</li>
-	<li>Native PHP templating</li>
-	<li>Auto class loading</li>
-	<li>Automated deployment/database versioning</li>
-	<li>Web services</li>
-	<li>Clean URL's</li>
+	<li>No Configuration</li>
+	<li>Native PHP Templating</li>
+	<li>RESTfull web services</li>
+	<li>ActiveRecords</li>
 </ul>
 </div>
 <div class="right">
 <ul>
 	<li>Integrated unit testing</li>
-	<li>UI components library</li>
+	<li>Web Controls library</li>
 	<li>Single point authentication</li>
-	<li>Active records</li>
-	<li>Namespace support</li>
+	<li>Automated deployment/database versioning</li>
 </ul>
 </div>
 </div>
