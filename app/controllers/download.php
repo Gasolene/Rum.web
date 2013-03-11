@@ -17,7 +17,7 @@
                 */
                 final public function onPageInit($sender, $args)
                 {
-                        $this->registerMenuItem('Download Now', \Rum::baseURI().'/downloads/release/current/php_rum.tar');
+                        $this->registerMenuItem('Download Now', \Rum::baseURI().'/downloads/release/'.\Rum::config()->appsettings["current_version"].'/php_rum_v'.\Rum::config()->appsettings["current_version"].'_release.tar');
                 }
         }
 ?>
