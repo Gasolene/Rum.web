@@ -21,9 +21,9 @@
     <add                         key = "min_php_ver"
                                value = "5.3.8" />
     <add                         key = "current_version"
-                               value = "6_4" />
+                               value = "6_5" />
     <add                         key = "current_version_name"
-                               value = "6.4" />
+                               value = "6.5" />
   </app-settings>
 
   <!--
