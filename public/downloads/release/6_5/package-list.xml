@@ -23,64 +23,12 @@
     path = "http://php-rum.com/downloads/release/6_5/plugins/ckeditor.zip"
     dest = "__PLUGINS_PATH__.'/ckeditor'" />
   <package
-    name = "CommonControls"
-    id = "commoncontrols"
-    author = "Darnell Shinbine"
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/commoncontrols.zip"
-    dest = "__PLUGINS_PATH__.'/commoncontrols'" />
-  <package
-    name = "DatePicker"
-    id = "datepicker"
-    author = ""
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/datepicker.zip"
-    dest = "__PLUGINS_PATH__.'/datepicker'" />
-  <package
     name = "FCKEditor"
     id = "fckeditor"
     author = "Darnell Shinbine"
     version = "1.0"
     path = "http://php-rum.com/downloads/release/6_5/plugins/fckeditor.zip"
     dest = "__PLUGINS_PATH__.'/fckeditor'" />
-<!--
-  <package
-    name = "Gatewayadapter"
-    id = "gatewayadapter"
-    author = ""
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/gatewayadapter.zip"
-    dest = "__PLUGINS_PATH__.'/gatewayadapter'" />-->
-  <package
-    name = "GD"
-    id = "gd"
-    author = "Darnell Shinbine"
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/gd.zip"
-    dest = "__PLUGINS_PATH__.'/gd'" />
-<!--
-  <package
-    name = "ImageCropper"
-    id = "imagecropper"
-    author = ""
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/imagecropper.zip"
-    dest = "__PLUGINS_PATH__.'/imagecropper'" />-->
-  <package
-    name = "JQuery"
-    id = "jquery"
-    author = "Darnell Shinbine"
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/jquery.zip"
-    dest = "__PLUGINS_PATH__.'/jquery'" />
-<!--
-  <package
-    name = "PickADate"
-    id = "pickadate"
-    author = ""
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/pickadate.zip"
-    dest = "__PLUGINS_PATH__.'/pickadate'" />-->
   <package
     name = "PickList"
     id = "picklist"
@@ -95,13 +43,6 @@
     version = "1.0"
     path = "http://php-rum.com/downloads/release/6_5/plugins/rss.zip"
     dest = "__PLUGINS_PATH__.'/rss'" />
-  <package
-    name = "SuggestBox"
-    id = "suggestbox"
-    author = "Darnell Shinbine"
-    version = "1.0"
-    path = "http://php-rum.com/downloads/release/6_5/plugins/suggestbox.zip"
-    dest = "__PLUGINS_PATH__.'/suggestbox'" />
   <package
     name = "TinyMCE"
     id = "tinymce"
