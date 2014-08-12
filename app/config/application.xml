@@ -30,7 +30,7 @@
    pages specification
    @default-theme: (default=default): specifies the default theme
   -->
-  <pages               default-theme = "default" />
+  <pages               default-theme = "theme1" />
 
  <!--
    viewstate specification

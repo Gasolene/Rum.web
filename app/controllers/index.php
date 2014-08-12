@@ -2,7 +2,7 @@
 
     namespace PHPRum\Controllers;
 
-    class Index extends \PHPRum\SideMenuController
+    class Index extends \PHPRum\ApplicationController
     {
         /**
          * called before Viewstate is loaded and Request is loaded and Post events are handled
@@ -17,9 +17,6 @@
          */
         public function onPageInit($sender, $args)
         {
-                $this->registerMenuItem('Docs', \Rum::baseURI().'/documentation/');
-                $this->registerMenuItem('Mailing list', \Rum::baseURI().'/community/');
-                $this->registerMenuItem('Download', \Rum::baseURI().'/download/');
         }
     }
 ?>

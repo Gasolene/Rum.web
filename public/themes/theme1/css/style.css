@@ -252,6 +252,11 @@ header .search hr {
     font-weight: bold;
 }
 
+
+.caption.sfb p {
+    margin-bottom: 10px;
+}
+
 .sliderblock1 {
     width: 470px;
 
