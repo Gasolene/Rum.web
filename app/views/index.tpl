@@ -35,14 +35,14 @@
                                  data-y="90"
                                  data-speed="300"
                                  data-start="800"
-                                 data-easing="easeOutExpo"  >PHP</div>
+                                 data-easing="easeOutExpo"  >What is</div>
 
                             <div class="caption sl_text2 sfr"
-                                 data-x="151"
+                                 data-x="214"
                                  data-y="90"
                                  data-speed="300"
                                  data-start="800"
-                                 data-easing="easeOutExpo"  >rum</div>
+                                 data-easing="easeOutExpo"  >rum?</div>
 
                             <div class="caption large_text fade"
                                  data-x="448"
@@ -77,6 +77,9 @@
 									 No routing tables, no complex config/env files, no div containers or special classes.  No validating request arrays, no updating databases
 									 manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.
 								 </p>
+								 <p>
+									 <a href="#">Continue...</a>
+								 </p>
 							</div>
 
                             <div class="caption sfb hidden-xs"
@@ -88,14 +91,7 @@
                                 <div class="sliderblock1">
 
                                     <div class="text pull-left">
-                                        <h2>What is <span>Rum</span></h2>
-										<h2><a href="">Core features</a></h2>
-										<h2><a href="">Show me</a></h2>
-										<h2><a href="">Are there docs?</a></h2>
-										<h2><a href="">Get <span>Rum</span></a></h2>
-										<h2><a href="">Sign up for newsletter</a></h2>
-										<h2><a href="">Contact me</a></h2>
-
+                                        <h2>Core <span>philosophy</span></h2>
                                         <hr class="hidden-sm" />
                                     </div>
                                     <div class="clearfix"></div>
@@ -383,17 +379,17 @@ No routing tables, no complex config/env files, no div containers or special cla
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">EsY <span>Studios</span></a>
+                        <a class="navbar-brand" href="#">PHP <span>rum</span></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#benifits">Core features</a></li>
-                            <li><a href="#ourapps">Apps</a></li>
+							<li><a href="#home">What is rum?</a></li>
+                            <li class="active"><a href="#benifits">Core benifits</a></li>
+                            <li><a href="#docs">Docs</a></li>
                             <li><a href="#meetteam">Team</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="blog.html">Blog Page</a></li>
+                            <li><a href="#blog">Get rum</a></li>
                             <li><a href="#contactus">Contact</a></li>
                             <!--
                             <li class="dropdown">
@@ -409,7 +405,7 @@ No routing tables, no complex config/env files, no div containers or special cla
                             -->
                         </ul>
                         <form class="navbar-form navbar-right" role="search">
-                            <button type="submit" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Ask for a Quote</button>
+                            <button type="submit" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Download Now</button>
                         </form>
 
                         <!--
@@ -473,7 +469,7 @@ No routing tables, no complex config/env files, no div containers or special cla
             <div class="container ">                
                 <div class="row">
                     <div class="row">
-                        <h2>What is rum?</h2>
+                        <h2>Core benifits?</h2>
 
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
@@ -484,23 +480,7 @@ No routing tables, no complex config/env files, no div containers or special cla
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Write less code</h3>
-                                    <p>Write less code (i mean it) - no more writing menial repetitive code for parsing requests, authenticating, validating, cleaning and updating database objects
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-search.png" alt="" />                                 
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -516,7 +496,7 @@ No routing tables, no complex config/env files, no div containers or special cla
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />                                 
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -526,13 +506,29 @@ No routing tables, no complex config/env files, no div containers or special cla
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Real abstraction</h3>
-                                    <p>No validating request arrays, no updating databases manually, no writing JavaScript AJAX hooks, no writing PHP code to handle AJAX callbacks, No more ugly controllers
+                                    <h3>Write less code</h3>
+                                    <p>Write less code (i mean it) - no more writing menial repetitive code for parsing requests, authenticating, validating, cleaning and updating database objects
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>Integrated unit tests</h3>
+                                    <p>Built in unit tests
                                     </p>
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />                                 
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -570,14 +566,16 @@ No routing tables, no complex config/env files, no div containers or special cla
                             </div>
                         </div>
 
+
+
                     </div>
                 </div>            
 
                 <div class="row projectline">
                     <div class="timeline hidden-xs">
                         <div class="upsteps">
-                            <div class="step2 pull-left">We'll get back to you in 24 Hours</div>
-                            <div class="step4 pull-left">We are working here</div>
+                            <div class="step2 pull-left">Build</div>
+                            <div class="step4 pull-left">Deploy</div>
                             <div class="clearfix"></div>
                         </div>
                         <div class="line">
@@ -590,43 +588,44 @@ No routing tables, no complex config/env files, no div containers or special cla
                             <div class="clearfix"></div>
                         </div>
                         <div class="botsteps">
-                            <div class="step1 pull-left">Ask for a Quote</div>
-                            <div class="step3 pull-left">Lets Discuss Business</div>
-                            <div class="step5 pull-left">Done</div>
+                            <div class="step1 pull-left">Design</div>
+                            <div class="step3 pull-left">Test</div>
+                            <div class="step5 pull-left">Repeat</div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                     <div class="quotebutton">
                         <form>
-                            <button type="submit" class="btn btn-transparent btn-lg">Ask for a Quote</button>
+                            <button type="submit" class="btn btn-transparent btn-lg">Download now</button>
                         </form>
                     </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
         </div>
-
+design, build, test, deploy, repeat
         <!-- END benefits section -->
 
         <!-- benefits section -->
 
-        <div id="benefitsx">
+        <div id="docs">
             <div class="container ">                
                 <div class="row">
                     <div class="row">
                         <h2>What is rum?</h2>
 
+
+
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
+                                    <h3>API Docs</h3>
+                                    <p>Download the complete API
                                     </p>
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />                                 
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -636,14 +635,13 @@ No routing tables, no complex config/env files, no div containers or special cla
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
+                                    <h3>User Guide</h3>
+                                    <p>Quick start user guide for installing a hello world app and quick API references
                                     </p>
                                     <hr />
                                 </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-search.png" alt="" />                                 
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -653,65 +651,13 @@ No routing tables, no complex config/env files, no div containers or special cla
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
+                                    <h3>Examples</h3>
+                                    <p>See some examples of basic tasks
                                     </p>
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-stat.png" alt=""  />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Less Time Design</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum text ever since type 
-                                        specimen book.
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt=""  />                                 
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-search.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -721,35 +667,6 @@ No routing tables, no complex config/env files, no div containers or special cla
                 </div>            
 
                 <div class="row projectline">
-                    <div class="timeline hidden-xs">
-                        <div class="upsteps">
-                            <div class="step2 pull-left">We'll get back to you in 24 Hours</div>
-                            <div class="step4 pull-left">We are working here</div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="line">
-                            <hr />
-                            <div class="point1"><div class="stickdown"></div><div class="whitecircle"></div></div>
-                            <div class="point2"><div class="stickup"></div><div class="whitecircle"></div></div>
-                            <div class="point3"><div class="stickdown"></div><div class="whitecircle"></div></div>
-                            <div class="point4"><div class="stickup"></div><div class="whitecircle"></div></div>
-                            <div class="point5"><div class="stickdown"></div><div class="whitecircle"></div></div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="botsteps">
-                            <div class="step1 pull-left">Ask for a Quote</div>
-                            <div class="step3 pull-left">Lets Discuss Business</div>
-                            <div class="step5 pull-left">Done</div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div class="quotebutton">
-                        <form>
-                            <button type="submit" class="btn btn-transparent btn-lg">Ask for a Quote</button>
-                        </form>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
             </div>
         </div>
 
@@ -762,7 +679,7 @@ No routing tables, no complex config/env files, no div containers or special cla
                     <div class="pull-left ltext">
                         <div class="pull-left newsletterdesc">
                             <h2>Signup for <span>Newsletter</span></h2>
-                            <p>Are you a Designer? We also give freebies to designers like you.</p>
+                            <p>Are you a developer? I would be happy to provide one on one support.</p>
                             <hr />
                         </div>
                         <div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
@@ -783,24 +700,24 @@ No routing tables, no complex config/env files, no div containers or special cla
 
 
         <!-- our apps -->
-        <div id="ourapps">
+<!--        <div id="ourapps">
             <div class="container">                
                 <div class="row">
                     <div class="row">
                         <div class="col-md-4 col-lg-5 col-sm-8 col-xs-12 appscaption">
-                            <h2>Take a Look at <span>Our Apps</span></h2>
+                            <h2>Our <span>apps</span></h2>
                             <img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="" />
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <!-- app static -->
 
 
-        <div id="ourappsstatic" class="visible-xs">
+<!--        <div id="ourappsstatic" class="visible-xs">
             <div class="container">    
                 <div class="row">
                     <div class="leftcol">
@@ -870,23 +787,23 @@ No routing tables, no complex config/env files, no div containers or special cla
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- end app static -->
 
 
         <!-- apps slider -->
-        <div id="ourappsslider" class="hidden-xs">
+<!--        <div id="ourappsslider" class="hidden-xs">
             <div class="container">    
                 <div class="row">
                     <div class="bannercontainer " >
                         <div class="banner" >
                             <ul>
-                                <!-- THE FIRST SLIDE -->
+                                 THE FIRST SLIDE 
                                 <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/camera-withpad.png">
-                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                     THE MAIN IMAGE IN THE SLIDE 
                                     <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
-                                    <!-- THE CAPTIONS OF THE FIRST SLIDE -->
+                                     THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
                                          data-x="0"
                                          data-y="0"
@@ -991,12 +908,12 @@ No routing tables, no complex config/env files, no div containers or special cla
 
 
 
-                                <!-- THE 2 SLIDE -->
+                                 THE 2 SLIDE 
                                 <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/lock-withpad.png" >
-                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                     THE MAIN IMAGE IN THE SLIDE 
                                     <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
-                                    <!-- THE CAPTIONS OF THE FIRST SLIDE -->
+                                     THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
                                          data-x="0"
                                          data-y="0"
@@ -1101,12 +1018,12 @@ No routing tables, no complex config/env files, no div containers or special cla
 
 
 
-                                <!-- THE 3 SLIDE -->
+                                 THE 3 SLIDE 
                                 <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/note-withpad.png">
-                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                     THE MAIN IMAGE IN THE SLIDE 
                                     <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
-                                    <!-- THE CAPTIONS OF THE FIRST SLIDE -->
+                                     THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
                                          data-x="0"
                                          data-y="0"
@@ -1212,9 +1129,9 @@ No routing tables, no complex config/env files, no div containers or special cla
                         </div>
                     </div>
                 </div>
-                <!-- <div class="slmarker"></div> -->
+                 <div class="slmarker"></div> 
             </div>
-        </div>
+        </div>-->
         <!-- END our apps -->
 
         <!-- meet the team -->
@@ -1223,13 +1140,13 @@ No routing tables, no complex config/env files, no div containers or special cla
             <div class="container">                
                 <div class="row">
                     <div class="row teammemebers">
-                        <h2>Meet the Team</h2>
+                        <h2>The team</h2>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
-                                    <h3>Matthew Potter</h3>
-                                    <p class="position">Ceo &amp; Founder</p>
+                                    <h3>Darnell <script>document.write('Shinbine');</script></h3>
+                                    <p class="position">Original developer</p>
                                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden.
                                     </p>
                                     <p class="sociallinks">
@@ -1322,29 +1239,34 @@ No routing tables, no complex config/env files, no div containers or special cla
         <div id="blog">
             <div class="container">                
                 <div class="row">
-                    <h2>From the <span>Blog</span></h2>
+					
+                    <h2><button type="submit" class="btn btn-default btn-lg pull-right">Download now</button>get <span>rum</span></h2>
                     <div class="row bloginfo">
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post1">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/blogimg1.png" alt="" />
-                            <h3>When Journalism Becomes a Game</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <p class="author"><i class="fa fa-user"></i> Matthew Potter on 23/05/2013</p>
+                            <h3>License</h3>
+                            <p>This software is released under the terms of the gnu lesser gerneral public license.	See /docs/GNU.txt for the complete license.</p>
+							<p class="author"><i class="fa fa-user"></i> <a style="color:black;" href="#">Download license</a></p>
+							<h3>Software disclaimer</h3>
+                            <p>Software downloaded from the php.rum web site is provided 'as is' without warranty of any kind, either express or implied. We assume no responsibility for damage, loss of data, or security breaches of any kind. Use at your own risk!</p>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post2">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/blogimg2.png" alt="" />
-                            <h3>When Journalism Becomes a Game</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <p class="author"><i class="fa fa-user"></i> Matthew Potter on 23/05/2013</p>
+                            <h3>Minimum requirements</h3>
+								<ul>
+									<li>PHP version 5.3.8 or later</li>
+									<li>Supported databases: PDO, MySQL (4.1+), MySQLi, MSSQL</li>
+								</ul>
+							<h3>Windows users...</h3>
+							<p>You will need to download and unpack these 3 stand alone executables in your application root directory in order to use the command line tools (optional): putty.exe, plink.exe, and unzip.exe</p>
+							<div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 moreblog">
-                            <h3>More from the Blog</h3>
+                            <h3>Patches &amp; Updates</h3>
+							
                             <ul>
-                                <li><a href="#">Robot Turns Your Watercolor Paintings</a></li>
-                                <li><a href="#">Top 10 Tech This Week</a></li>
-                                <li><a href="#">1 in 4 Young Adults Regret Social Media Posts</a></li>
-                                <li><a href="#">The Royal Baby Has Nothing on Honey Boo Boo</a></li>
-                                <li><a href="#">How to Photoshop Hybrid Animals</a></li>
-                                <li><a href="#">This Is What Happens When You Scan Saran Wrap</a></li>
+                                <li><a href="#">Version 6.6 update</a></li>
+                                <li><a href="#">Version 6.5 update</a></li>
+								<li><a href="#">Version 6.4 update</a></li>
+								<li><a href="#">Archive</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1354,7 +1276,7 @@ No routing tables, no complex config/env files, no div containers or special cla
         <!-- End Blog -->
 
         <!-- MAP -->
-        <div id="googleMap"></div>
+        <!--<div id="googleMap"></div>-->
         <!-- END MAP -->
 
 
@@ -1363,12 +1285,12 @@ No routing tables, no complex config/env files, no div containers or special cla
                 <div class="row topdesc">
                     <div class="row">
                         <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-                            <h2>Thanks for <span>Contacting Us</span></h2>
+                            <h2>Thanks for <span>Contacting Me</span></h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-5 col-sm-offset-6 col-sm-6 col-xs-12">
-                            <p>We would love to answer your question. We are available 24X7, Please give us some time if we are unable to reply in that time.</p>
+                            <p>I would love to answer your question.</p>
                         </div>
                     </div>
                 </div>                    
@@ -1380,35 +1302,6 @@ No routing tables, no complex config/env files, no div containers or special cla
                             <textarea name="message" id="message" class="form-control" rows="3" placeholder="Message"></textarea>
                             <button type="submit" class="btn btn-transparent">Submit</button>
                         </form>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col2">
-                        <h3>Address</h3>
-                        <div class="botblock">
-                            <div class="pull-left"><i class="fa fa-building"></i></div>
-                            <div class="pull-left text">
-                                <p>John Someone<br>
-                                    1111-A Nowhere Lane<br>
-                                    Outta Sight, State 90378</p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <h3>Phone</h3>
-                        <div class="botblock">
-                            <div class="pull-left"><i class="fa fa-mobile-phone"></i></div>
-                            <div class="pull-left text">
-                                <p>+123 598 659<br> 
-                                    +123 859 549</p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <h3>Email</h3>
-                        <div class="botblock">
-                            <div class="pull-left"><i class="fa fa-envelope-o"></i></div>
-                            <div class="pull-left text">
-                                <p><a href="mailto:Example@example.com">Example@example.com</a></p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
                         <h3>Social Networks</h3>
@@ -1428,18 +1321,10 @@ No routing tables, no complex config/env files, no div containers or special cla
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <h3>Hire Us</h3>
-                        <div class="botblock">
-                            <div class="pull-left"><img src="<?=\Rum::config()->themes?>/theme1/images/odesk-logo.png" alt="" /></div>
-                            <div class="pull-left text">
-                                <p><a href="#">oDesk profile link</a></p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
                     </div>
                 </div>
                 <div class="row botline">
-                    Copyrights 2013 yourcompanyname.com
+                    Copyrights 2014 PHP-rum.com
                 </div>
             </div>
         </div>
