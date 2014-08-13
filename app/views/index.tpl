@@ -29,7 +29,7 @@
 
                         <!-- First slide -->
                         <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="" alt="">
+                            <img src="/theme1/images/transparent.png" style="" alt="">
                             <div class="caption sl_text sfl"
                                  data-x="71"
                                  data-y="90"
@@ -49,7 +49,7 @@
                                  data-y="105"
                                  data-speed="500"
                                  data-start="1000"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="Dots"></div>
+                                 data-easing="easeOutExpo"  ><img src="/theme1/images/dots.png" alt="Dots"></div>
 
                             <div class="caption large_text fade"
                                  data-x="448"
@@ -388,7 +388,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -404,7 +404,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-doc.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -420,7 +420,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-search.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/search.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -445,7 +445,7 @@
                             <p>Are you a developer? I would be happy to provide one on one support.</p>
                             <hr />
                         </div>
-                        <div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
+                        <div class="pull-left limg"><img src="<?=\Rum::baseURI()?>/images/icons/box.png" alt="" /></div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="pull-left lform">
@@ -469,7 +469,7 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-5 col-sm-8 col-xs-12 appscaption">
                             <h2>Our <span>apps</span></h2>
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="" />
+                            <img src="/theme1/images/dots.png" alt="" />
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -502,7 +502,7 @@
 
 
                         <h3>Client</h3>
-                        <a href="#"><img src="<?=\Rum::config()->themes?>/theme1/images/logo-hive.png" alt="" /></a>
+                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
 
 
                         <hr>
@@ -515,7 +515,7 @@
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                         <h3 class="clienttalk hidden-sm">Client Talk</h3>
                         <div class="testimonials hidden-sm ">
-                            <div class="img pull-left"><img src="<?=\Rum::config()->themes?>/theme1/images/client.png" alt="" /></div>
+                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                             </div>
                             <div class="clearfix"></div>
@@ -562,9 +562,9 @@
                         <div class="banner" >
                             <ul>
                                  THE FIRST SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/camera-withpad.png">
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/camera-withpad.png">
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -591,7 +591,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="<?=\Rum::config()->themes?>/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -604,7 +604,7 @@
                                          data-speed="300"
                                          data-start="500"
                                          data-easing="easeOutExpo"  >
-                                        <img src="<?=\Rum::config()->themes?>/theme1/images/camera.png" alt="" />
+                                        <img src="/theme1/images/camera.png" alt="" />
 
                                     </div>
 
@@ -633,7 +633,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="<?=\Rum::config()->themes?>/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -672,9 +672,9 @@
 
 
                                  THE 2 SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/lock-withpad.png" >
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/lock-withpad.png" >
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -700,7 +700,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="<?=\Rum::config()->themes?>/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -713,7 +713,7 @@
                                          data-speed="600"
                                          data-start="1100"
                                          data-easing="easeOutExpo"  >
-                                        <img src="<?=\Rum::config()->themes?>/theme1/images/lock.png" alt="" />
+                                        <img src="/theme1/images/lock.png" alt="" />
 
                                     </div>
 
@@ -742,7 +742,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="<?=\Rum::config()->themes?>/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -782,9 +782,9 @@
 
 
                                  THE 3 SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="<?=\Rum::config()->themes?>/theme1/images/note-withpad.png">
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/note-withpad.png">
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -810,7 +810,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="<?=\Rum::config()->themes?>/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -823,7 +823,7 @@
                                          data-speed="600"
                                          data-start="1100"
                                          data-easing="easeOutExpo"  >
-                                        <img src="<?=\Rum::config()->themes?>/theme1/images/note.png" alt="" />
+                                        <img src="/theme1/images/note.png" alt="" />
 
                                     </div>
 
@@ -852,7 +852,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="<?=\Rum::config()->themes?>/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -920,7 +920,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4 ">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/team1.png" alt="" />                                 
+                                    <img src="/theme1/images/team1.png" alt="" />                                 
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -942,7 +942,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/team2.png" alt="" />                                 
+                                    <img src="/theme1/images/team2.png" alt="" />                                 
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -985,7 +985,7 @@
 <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/unzip.htm">Unzip.exe</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 moreblog">
-                            <div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
+                            <div class="pull-left limg"><img src="/theme1/images/box.png" alt="" /></div>
 							<div style="clear:left;"></div>
                             <ul>
                                 <li><a href="#">Patches &amp; Updates</a></li>

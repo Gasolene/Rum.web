@@ -3,14 +3,14 @@
 	 * @license			see /docs/license.txt
 	 * @package			PHPRum
 	 * @author			Darnell Shinbine
-	 * @copyright		Copyright (c) 2011
+	 * @copyright		Copyright (c) 2013
 	 */
 	namespace System\DB\PDO;
 	use \System\DB\DataAdapter;
 
 
 	/**
-	 * Represents an open connection to a MySQL database using the mysqli driver
+	 * Represents an open connection to a PDO database using the PDO driver
 	 *
 	 * @package			PHPRum
 	 * @subpackage		DB
@@ -20,10 +20,53 @@
 	{
 		/**
 		 * Handle to the open PDO object
-		 * @var PDO
+		 * @var \PDO
 		 */
 		private $pdo;
-		private $db;
+
+		/**
+		 * PDO dsn connection string
+		 * @var string
+		 */
+		private $dsn;
+
+		/**
+		 * PDO database username
+		 * @var string
+		 */
+		private $username;
+
+		/**
+		 * PDO database password
+		 * @var string
+		 */
+		private $password;
+
+		/**
+		 * PDO connection options
+		 * @var array
+		 */
+		private $options;
+
+
+		/**
+		 * Constructor
+		 * creates a PDO connection object to a datasource
+		 *
+		 * @param   string   $dsn   connection string
+		 * @param   string   $username   database username
+		 * @param   string   $password   database password
+		 * @return	DataAdapter
+		 */
+		final protected function __construct( $dsn, $username = '', $password = '', array $options = array() )
+		{
+			$this->dsn = $dsn;
+			$this->username = $username;
+			$this->password = $password;
+			$this->options = $options;
+
+			$this->open();
+		}
 
 
 		/**
@@ -32,27 +75,10 @@
 		 */
 		public function open()
 		{
-			
 			if( !$this->pdo )
 			{
-				try
-				{
-					$this->db=$this->args['databasetype'];
-					if($this->db == "mysql" || $this->db == "mysqli")
-						{
-						$dsn= "mysql:dbname=".$this->args['database'].";host=".$this->args['server'];
-						$this->pdo = new \PDO($dsn,$this->args['uid'],$this->args['pwd']);
-						}
-					else if($this->db == "mssql")
-						{						
-						$dsn= "sqlsrv:Server=".$this->args['server'].";Database=".$this->args['database'];
-						$this->pdo = new \PDO($dsn,$this->args['uid'],$this->args['pwd']);					
-						}
-				}
-				catch(\PDOException $e)
-				{
-					throw new \System\DB\DataAdapterException("Could not connect to database " . $e->getMessage());
-				}
+				$this->pdo = new \PDO($this->dsn, $this->username, $this->password, $this->options);
+				$this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			}
 			else
 			{
@@ -92,29 +118,19 @@
 
 
 		/**
-		 * Executes a query procedure on the current connection and return the result
+		 * prepare an SQL statement
+		 * Creates a prepared statement bound to parameters specified by the @symbol
+		 * e.g. SELECT * FROM `table` WHERE user=@user
 		 *
-		 * @param  string		$query		sql query
-		 * @return resource
+		 * @param  string	$statement	SQL statement
+		 * @param  array	$parameters	array of parameters to bind
+		 * @return SQLStatement
 		 */
-		protected function query( $query,$buffer )
+		public function prepare($statement, array $parameters = array())
 		{
-			if( $this->pdo )
-			{
-				$result = $this->pdo->query( $query );
-				
-				if( !$result )
-				{
-					$pdo_error = $this->pdo->errorInfo()[2];
-					throw new \System\DB\DatabaseException($pdo_error);
-				}
-
-				return $result;
-			}
-			else
-			{
-				throw new \System\DB\DataAdapterException("PDO resource in not a valid PDO object");
-			}
+			$psoStatement = new PDOStatement($this, $this->pdo);
+			$psoStatement->prepare($statement, $parameters);
+			return $psoStatement;
 		}
 
 
@@ -128,62 +144,51 @@
 		{
 			if( $this->pdo )
 			{
-				$result = $this->runQuery( $ds->source );
-				
-				if( $result )
+				$result = $this->query( $ds->source );
+
+				$fields = array();
+				$fieldMeta = array();
+				$fieldCount = $result->columnCount();
+				$table = '';
+
+				for($i=0; $i < $fieldCount; $i++)
 				{
-					$fields = array();
-					$fieldMeta = array();
-					$fieldCount = $result->columnCount();
-					$table="";
-					for($i=0; $i < $fieldCount; $i++)
-					{
-						$meta = $result->getColumnMeta($i);
-						$fields[] = $meta['name'];
-						if($this->db == "mssql") $meta['table']=$this->getTableFromSQL( $ds->source );
-						$fieldMeta[] = $this->getColumnSchema($meta);
-						$table=$meta['table'];
-					}
-					
-					$rows = array();
-					$rowCount = $result->rowCount();
-					for( $row=0; $row < $rowCount; $row++ )
-					{
-						$rows[] =  $result->fetch( \PDO::FETCH_ASSOC);
-					}
-					$ds->setTable($table);
-					$ds->setFieldMeta( $fieldMeta );
-					$ds->setFields( $fields );
-					$ds->setRows( $rows );
-					$result->closeCursor();;
+					$meta = $result->getColumnMeta($i);
+
+					$fields[] = $meta['name'];
+					$fieldMeta[] = $this->getColumnSchema($meta);
+					$table = $meta['table'];
 				}
-				else
-				{
-					$pdo_error = $this->pdo->errorInfo()[2];
-					throw new \System\DB\DatabaseException($pdo_error);
-				}
+
+				$rows = $result->fetchAll(\PDO::FETCH_ASSOC);
+
+				$ds->setTable( $table );
+				$ds->setFieldMeta( $fieldMeta );
+				$ds->setFields( $fields );
+				$ds->setRows( $rows );
+				$result->closeCursor();
 			}
 			else
 			{
 				throw new \System\DB\DataAdapterException("Connection is closed");
 			}
 		}
-/**
+
+
+		/**
 		 * builds a MSSQL DataBaseSchema object
 		 *
 		 * @return DatabaseSchema
 		 */
-		
-		
 		public function buildSchema()
 		{
-			
 			$databaseProperties = array();
 			$tableSchemas = array();
 
-			if($this->db == "mysql" || $this->db == "mysqli")	$tables = $this->runQuery( "SHOW TABLES" );
-			else if($this->db == "mssql")						$tables = $this->runQuery( "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';" );
-			
+			// TODO: Fix, will not work with all db adapters
+			$tables = $this->query( "SHOW TABLES" );
+//			$tables = $this->query( "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';" );
+
 			while($table = $tables->fetch( \PDO::FETCH_NUM))
 			{
 				$i=0;
@@ -191,31 +196,37 @@
 				$foreignKeys = array();
 				$columnSchemas = array();
 
-				if($this->db == "mysql" || $this->db == "mysqli") $columns = $this->runQuery( "SELECT * FROM `{$table[0]}` WHERE 0" );
-				else if($this->db == "mssql")	$columns = $this->runQuery( "SELECT * FROM {$table[0]} " );
-				
-					
-				$fieldCount = $columns->columnCount();
-				for($i=0; $i < $fieldCount; $i++)
+				$query = $this->queryBuilder()->select()->from($table[0]);
+				$query->empty = true;
+
+				$columns = $this->query( $query );
+
+				if( $columns )
+				{
+					$fields = array();
+					$fieldMeta = array();
+					$fieldCount = $columns->columnCount();
+					$table="";
+
+					for($i=0; $i < $fieldCount; $i++)
 					{
 						$meta = $columns->getColumnMeta($i);
-						$meta['table']=$table[0];
-						$columnSchemas[] = $this->getColumnSchema($meta);
-						if(is_array($meta['flags']) && in_array("primary_key", $meta['flags']))
+						$columnSchema = $this->getColumnSchema($meta);
+						$columnSchemas[] = $columnSchema;
+
+						if($columnSchema->primaryKey)
 						{
 							$tableProperties['primaryKey'] = $meta['name'];
 						}
 					}
-				
-				
+				}
+
 				$tableSchemas[] = new \System\DB\TableSchema($tableProperties, $foreignKeys, $columnSchemas);
 			}
-			
+
 			return new \System\DB\DatabaseSchema($databaseProperties, $tableSchemas);
-					
 		}
 
-		
 
 		/**
 		 * creats a TableSchema object
@@ -224,12 +235,13 @@
 		 */
 		public function addTableSchema( \System\DB\TableSchema &$tableSchema )
 		{
+			$primaryKeys = array();
+			$indexKeys = array();
+			$uniqueKeys = array();
 			$columns = "";
+
 			foreach($tableSchema->columnSchemas as $columnSchema)
 			{
-				$primaryKeys = array();
-				$indexKeys = array();
-				$uniqueKeys = array();
 				$type = "";
 
 				if($columnSchema->integer)
@@ -243,10 +255,6 @@
 				elseif($columnSchema->boolean)
 				{
 					$type = "TINYINT(1)";
-				}
-				elseif($columnSchema->year)
-				{
-					$type = "YEAR";
 				}
 				elseif($columnSchema->date)
 				{
@@ -361,14 +369,15 @@
 			if( $this->pdo )
 			{
 				$tableSchema = $ds->dataAdapter->getSchema()->seek($ds->table);
-				
 				$this->queryBuilder()
 					->insertInto($ds->table, $ds->fields)
 					->values($ds->row)
-					->runQuery();
+					->execute();
 
-				$ds[$tableSchema->primaryKey] = $this->getLastInsertId();
-				
+				if($tableSchema->primaryKey)
+				{
+					$ds[$tableSchema->primaryKey] = $this->getLastInsertId();
+				}
 			}
 			else
 			{
@@ -388,12 +397,19 @@
 			if( $this->pdo )
 			{
 				$tableSchema = $ds->dataAdapter->getSchema()->seek($ds->table);
-			
-				$this->queryBuilder()
-					->update($ds->table)
-					->setColumns($ds->table, $ds->fields, $ds->row)
-					->where($ds->table, $tableSchema->primaryKey, '=', $ds[$tableSchema->primaryKey])
-					->runQuery();
+
+				if($tableSchema->primaryKey)
+				{
+					$this->queryBuilder()
+						->update($ds->table)
+						->setColumns($ds->table, $ds->fields, $ds->row)
+						->where($ds->table, $tableSchema->primaryKey, '=', $ds[$tableSchema->primaryKey])
+						->query();
+				}
+				else
+				{
+					throw new \System\DB\DataAdapterException("Cannot update record, no primary key is defined");
+				}
 			}
 			else
 			{
@@ -413,11 +429,19 @@
 			if( $this->pdo )
 			{
 				$tableSchema = $ds->dataAdapter->getSchema()->seek($ds->table);
-				$this->queryBuilder()
-					->delete()
-					->from($ds->table)
-					->where($ds->table, $tableSchema->primaryKey, '=', $ds[$tableSchema->primaryKey])
-					->runQuery();
+
+				if($tableSchema->primaryKey)
+				{
+					$this->queryBuilder()
+						->delete()
+						->from($ds->table)
+						->where($ds->table, $tableSchema->primaryKey, '=', $ds[$tableSchema->primaryKey])
+						->execute();
+				}
+				else
+				{
+					throw new \System\DB\DataAdapterException("Cannot delete record, no primary key is defined");
+				}
 			}
 			else
 			{
@@ -429,12 +453,11 @@
 		/**
 		 * creats a QueryBuilder object
 		 *
-		 * @return MySQLQueryBuilder
+		 * @return PDOQueryBuilder
 		 */
 		public function queryBuilder()
 		{
-			return new PDOQueryBuilder($this);
-			//else if($this->db == "mysqli") return new \System\DB\MySQLi\MySQLiQueryBuilder($this);
+			return new PDOQueryBuilder($this, $this->pdo);
 		}
 
 
@@ -445,14 +468,7 @@
 		 */
 		public function beginTransaction()
 		{
-			if( $this->pdo)
-			{
-				return $this->pdo->beginTransaction();		
-			}
-			else
-			{
-				throw new \System\DB\DataAdapterException("PDO resource is not a valid link identifier");
-			}					
+			return new PDOTransaction($this->pdo);
 		}
 
 
@@ -465,11 +481,11 @@
 		{
 			if( $this->pdo )
 			{
-				return (int)$this->pdo->lastInsertId();
+				return $this->pdo->lastInsertId();
 			}
 			else
 			{
-				throw new \System\DB\DataAdapterException("MySQLi resource is not a valid link identifier");
+				throw new \System\DB\DataAdapterException("PDO resource is not a valid link identifier");
 			}
 		}
 
@@ -483,11 +499,12 @@
 		{
 			if( $this->pdo )
 			{
+				// TODO: fix
 				return $this->pdo->rowCount();
 			}
 			else
 			{
-				throw new \System\DB\DataAdapterException("MySQLi resource is not a valid link identifier");
+				throw new \System\DB\DataAdapterException("PDO resource is not a valid link identifier");
 			}
 		}
 
@@ -499,208 +516,70 @@
 		 * @return string						Escaped string
 		 */
 		public function escapeString( $unescaped_string )
-		{									
-			return $this->pdo->quote($unescaped_string);
+		{
+			return $this->pdo->prepare( $unescaped_string )->queryString;
 		}
 
 
 		/**
 		 * returns a populated ColumnSchema object
-		 * @param object $meta
-		 * @return \System\DB\ColumnSchema 
+		 * @param object $meta meta object
+		 * @return \System\DB\ColumnSchema
 		 */
 		private function getColumnSchema($meta)
 		{
-			
-			
-			/*
-			 * MySQL Problems with PDO:
-			 * YEAR, BINARY, VAR_BINARY, TINY_INT AND BIT FIELDS NOT SUPPORTED YET BY PDO 
-			 * Auto_increment is also not supported
-			 * 
-			 * MSSQL Problems with PDO:
-			 * Null, autoincrement not supported
-			 * 
-			 */
-			if(!isset($meta['native_type'])) $meta['native_type']=null;
-			/*
-			if($meta['name'] == "test_date") 
-				{
-				var_dump($meta);
-				dmp($meta);
-				
-				}
-			 * 
-			 */
-				
-			if($this->db == "mssql")
-				{
-				$flags = explode(" ", $meta['sqlsrv:decl_type']);
-				$type=$flags[0];
-				$field=  $this->getField($meta['table'], $meta['name']);
-				
-				return new \System\DB\ColumnSchema(array(
-					'name' => $meta['name'],
-					'table' => $meta['table'],
-					'type' => $type==null?"":$type,
-					'length' => $meta['len'],
-					'notNull' => is_array($meta['flags'])==true?in_array("not_null", $meta['flags']):false ,
-					'primaryKey' => is_array($flags)==true?in_array("identity", $flags):false ,
-					'multipleKey' => is_array($meta['flags'])==true?in_array("multiple_key", $meta['flags']):false,
-					'foreignKey' => FALSE,
-					'unique' => (bool) ($field['autoIncrement']),
-					'numeric' => (bool)	(	$type == "int" || 
-											$type == "smallint" || 
-											$type == "tinyint" || 
-											$type == "numeric" || 
-											$type == "bit"||
-											$type == "money" || 
-											$type == "timestamp"||
-											$type == "decimal" || 
-											$type == "double" || 
-											$type == "float"|| 
-											$type == "real"
-										),
-					'blob' => (bool)	($type == "varbinary" && $meta['len'] == 0),
-					'string' => (bool)	(	$type == "varchar" || 
-											$type == "nvarchar" || 
-											($type == "varbinary" && $meta['len'] >0) ||
-											$type == "char" ||
-											$type == "nchar" ||
-											$type == "text" ||
-											$type == "ntext"																		
-										),
-					'integer' => (bool)	(	$type == "int" || 
-											$type == "smallint" || 
-											$type == "tinyint" || 
-											$type == "numeric" || 
-											$type == "bit"
-										),
-					'real' => (bool)	(	$type == "decimal" || 
-											$type == "double" || 
-											$type == "float"|| 
-											$type == "real"
-										),
-					'year' => FALSE,
-					'date' => (bool)	(	$type == "date" ),
-					'time' => (bool)	(	$type == "time" ),
-					'datetime' => (bool)	(	$type == "datetime" || 
-												$type == "datetime2" || 
-												$type == "smalldatetime" || 
-												$type == "datetimeoffset"							
-											),
-					'boolean' => (bool) ($type == "bit"),
-					'autoIncrement' => (bool) ($field['autoIncrement']),
-					'binary' => (bool)	(	($type == "varbinary" && $meta['len'] >0)  || 
-											$type == "binary"
-										)
-					));
-				
-				}
-			else if($this->db == "mysql" || $this->db == "mysqli")
-				{
-				return new \System\DB\ColumnSchema(array(
-					'name' => $meta['name'],
-					'table' => $meta['table'],
-					'type' => $meta['native_type']==null?"":$meta['native_type'],
-					'length' => $meta['len'],
-					'notNull' => is_array($meta['flags'])==true?in_array("not_null", $meta['flags']):"" ,
-					'primaryKey' => is_array($meta['flags'])==true?in_array("primary_key", $meta['flags']):"" ,
-					'multipleKey' => is_array($meta['flags'])==true?in_array("multiple_key", $meta['flags']):"",
-					'foreignKey' => FALSE,
-					'unique' => is_array($meta['flags'])==true?in_array("unique_key", $meta['flags']):"",
-					'numeric' => (bool)	(	$meta['native_type'] == "LONG" || 
-											$meta['native_type'] == "SHORT"|| 
-											$meta['native_type'] == "LONGLONG" || 
-											$meta['native_type'] == "TIMESTAMP" ||
-											$meta['native_type'] == "NEWDECIMAL" || 
-											$meta['native_type'] == "FLOAT"|| 
-											$meta['native_type'] == "DOUBLE" ||
-											(!$meta['native_type'] && $meta['len']===1)
-										),
-					'blob' => is_array($meta['flags'])==true?in_array("blob", $meta['flags']):"",
-					'string' => (bool)	(	$meta['native_type'] == "STRING" || 
-											$meta['native_type'] == "VAR_STRING"|| 
-											$meta['native_type'] == "VAR_STRING"
-										),
-					'integer' => (bool)	(	$meta['native_type'] == "LONG" || 
-											$meta['native_type'] == "SHORT"|| 
-											$meta['native_type'] == "LONGLONG" || 
-											(!$meta['native_type'] && $meta['len']===1)
-										),
-					'real' => (bool)	(	$meta['native_type'] == "NEWDECIMAL" || 
-											$meta['native_type'] == "FLOAT"|| 
-											$meta['native_type'] == "DOUBLE"
-										),
-					'year' => FALSE,
-					'date' => (bool)	(	$meta['native_type'] == "DATE" ),
-					'time' => (bool)	(	$meta['native_type'] == "TIME" ),
-					'datetime' => (bool)	(	$meta['native_type'] == "DATETIME" ),
-					'boolean' => (bool) ($meta['len']===1 && !$meta['native_type']),
-					'autoIncrement' => FALSE,
-					'binary' => false));
-			
-				}									 
+			$flags = $meta['flags'];
+			$type = $this->_translateNativeType(isset($meta['native_type'])?$meta['native_type']:'');
+
+			return new \System\DB\ColumnSchema(array(
+				'name' => $meta['name'],
+				'table' => $meta['table'],
+				'type' => isset($meta['native_type'])?$meta['native_type']:'',
+				'length' => $meta['len'],
+				'notNull' => in_array('not_null', $flags)===true,
+				'primaryKey' => in_array('primary_key', $flags)===true,
+				'foreignKey' => false, // PDO does not provide this
+				'unique' => false, // PDO does not provide this
+				'numeric' => ($meta['len']==1 && !$type) || $type=='int' || $type=='real',
+				'blob' => $type=='blob',
+				'string' => $type=='string',
+				'integer' => ($meta['len']==1 && !$type) || $type=='int',
+				'real' => $type=='real',
+				'date' => $type=='date',
+				'time' => $type=='time',
+				'datetime' => $type=='datetime',
+				'boolean' => $meta['len']==1,
+				'autoIncrement' => false // PDO does not provide this
+				));
 		}
-		private function getTableFromSQL($sql)
+
+
+		/**
+		 * returns the native PHP type
+		 * @param string $type db type
+		 * @return string native type
+		 */
+		private function _translateNativeType($type)
 		{
-			$posStart = stripos($sql,'from');
-			while(!$this->removeWhitespace($sql,$posStart) && $posStart < strlen($sql)){
-			$posStart++;
-			}
-			$posEnd = $posStart + 1;
-			while(!$this->removeWhitespace($sql,$posEnd) && $posEnd < strlen($sql)){
-			$posEnd++;
-			}
+			$types = array(
+				'VAR_STRING' => 'string',
+				'STRING' => 'string',
+				'BLOB' => 'blob',
+				'LONGLONG' => 'int',
+				'LONG' => 'int',
+				'SHORT' => 'int',
+				'DATETIME' => 'datetime',
+				'DATE' => 'date',
+				'TIME' => 'time',
+				'DOUBLE' => 'real',
+				'FLOAT' => 'real',
+				'NEWDECIMAL' => 'real',
+				'DECIMAL' => 'real',
+				'TIMESTAMP' => 'int',
+				'' => ''
+			);
 
-			$table = substr($sql,$posStart,$posEnd - $posStart + 1);
-
-			$table = rtrim(ltrim(str_replace('[','',str_replace(']','',$table))));
-
-			return $table;
+			return $types[$type];
 		}
-		
-		private function removeWhitespace($string,$start)
-		{
-		if($start >= strlen($string)){
-			return false;
-		}
-		return substr($string,$start,1)==' ' ||
-				substr($string,$start,1)=="\t" ||
-				substr($string,$start,1)=="\n" ||
-				substr($string,$start,1)=="\r";
-		}
-		
-		public function getField($table, $fieldName)
-			{
-				$sql = "select c.status as status, case when pc.colid = c.colid then '1' else '' end as xtype, case when systypes.name = 'uniqueidentifier' then 1 else 0 end as guid
-												from sysobjects o
-												left join (sysindexes i
-													join sysobjects pk ON i.name = pk.name
-													and pk.parent_obj = i.id
-													and pk.xtype = 'PK'
-													join sysindexkeys ik on i.id = ik.id
-													and i.indid = ik.indid
-													join syscolumns pc ON ik.id = pc.id
-													AND ik.colid = pc.colid) ON i.id = o.id
-												join syscolumns c ON c.id = o.id
-												left join systypes on c.xusertype = systypes.xusertype
-												where o.name = '".$table."'
-												AND c.name = '".$fieldName."'
-												order by ik.keyno
-			";			
-				$result = $this->runQuery( $sql );
-				$attributes = $result->Fetch(\PDO::FETCH_BOTH);
-				//dmp($result);
-				//dmp($fieldName);
-				$field = array();
-				$field['name'] = $fieldName;
-				$field['table'] = $table;
-				$field['autoIncrement'] = ($attributes[0] & 128) == 128;
-				$field['primaryKey'] = ($attributes[1] == '1');
-				$field['unique'] = ($attributes[2] == '1');
-				return $field;
-			}
-	
 	}
 ?>

@@ -2,11 +2,10 @@
 	/**
 	 * @license			see /docs/license.txt
 	 * @package			PHPRum
-	 * @author			Tahsin Zulkarnine
-	 * @copyright		Copyright (c) 2011
+	 * @author			Darnell Shinbine
+	 * @copyright		Copyright (c) 2013
 	 */
 	namespace System\DB\PDO;
-	use \System\DB\TransactionBase;
 
 
 	/**
@@ -16,14 +15,14 @@
 	 * @subpackage		DB
 	 * @author			Darnell Shinbine
 	 */
-	final class PDOTransaction extends TransactionBase
+	final class PDOTransaction extends \System\DB\TransactionBase
 	{
 		/**
 		 * Begins a transaction
 		 */
 		protected function beginTransaction()
 		{
-			$this->dataAdapter->pdo->beginTransaction();
+			$this->resource->beginTransaction();
 		}
 
 
@@ -32,7 +31,7 @@
 		 */
 		protected function rollbackTransaction()
 		{
-			$this->dataAdapter->pdo->rollBack;
+			$this->resource->rollBack();
 		}
 
 
@@ -41,7 +40,7 @@
 		 */
 		protected function commitTransaction()
 		{
-			$this->dataAdapter->pdo->commit();
+			$this->resource->commit();
 		}
 	}
 ?>

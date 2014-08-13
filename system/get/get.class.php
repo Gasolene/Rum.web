@@ -3,7 +3,7 @@
 	 * @license			see /docs/license.txt
 	 * @package			PHPRum
 	 * @author			Darnell Shinbine
-	 * @copyright		Copyright (c) 2011
+	 * @copyright		Copyright (c) 2013
 	 */
 	namespace System\Get;
 	use System\Console\ConsoleApplicationBase;
@@ -106,10 +106,10 @@
 				echo "unpacking package {$meta["id"]} to {$dest}...".PHP_EOL;
 
 				if($task=="update") {
-					\passthru("unzip {$zip} -d {$dest} -o -f");
+					\passthru("unzip -o \"{$zip}\" -d \"{$dest}\"");
 				}
 				else {
-					\passthru("unzip {$zip} -d {$dest}");
+					\passthru("unzip \"{$zip}\" -d \"{$dest}\"");
 				}
 
 				echo "cleaning up...".PHP_EOL;

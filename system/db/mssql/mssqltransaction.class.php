@@ -3,11 +3,9 @@
 	 * @license			see /docs/license.txt
 	 * @package			PHPRum
 	 * @author			Darnell Shinbine
-	 * @author			Tahsin Zulkarnine
-	 * @copyright		Copyright (c) 2011
+	 * @copyright		Copyright (c) 2013
 	 */
 	namespace System\DB\MySQL;
-	use \System\DB\TransactionBase;
 
 
 	/**
@@ -15,17 +13,17 @@
 	 *
 	 * @package			PHPRum
 	 * @subpackage		DB
-	 * @author			Tahsin Zulkarnine 
+	 * @author			Darnell Shinbine 
 	 */
-	final class MSSQLTransaction extends TransactionBase
+	final class MSSQLTransaction extends \System\DB\TransactionBase
 	{
 		/**
 		 * Begins a transaction
 		 */
 		protected function beginTransaction()
 		{
-			$this->dataAdapter->execute( 'SET autocommit=0' );
-			$this->dataAdapter->execute( 'START TRANSACTION' );
+			$this->resource->execute( 'SET autocommit=0' );
+			$this->resource->execute( 'START TRANSACTION' );
 		}
 
 
@@ -34,7 +32,7 @@
 		 */
 		protected function rollbackTransaction()
 		{
-			$this->dataAdapter->execute( 'ROLLBACK' );
+			$this->resource->execute( 'ROLLBACK' );
 		}
 
 
@@ -43,7 +41,7 @@
 		 */
 		protected function commitTransaction()
 		{
-			$this->dataAdapter->execute( 'COMMIT' );
+			$this->resource->execute( 'COMMIT' );
 		}
 	}
 ?>

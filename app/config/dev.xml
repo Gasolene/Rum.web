@@ -7,4 +7,4 @@
 -->
 <dev
   namespace  = "PHPRum"
-  repository = "http://php-rum.com/downloads/release/6_4/package-list.xml" />
+  repository = "http://php-rum.com/downloads/release/6_6/package-list.xml" />

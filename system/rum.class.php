@@ -3,7 +3,7 @@
 	 * @license			see /docs/license.txt
 	 * @package			PHPRum
 	 * @author			Darnell Shinbine
-	 * @copyright		Copyright (c) 2011
+	 * @copyright		Copyright (c) 2013
 	 */
 
 
@@ -205,7 +205,6 @@
 		static public function link($title, $page, array $args = array(), $class = '')
 		{
 			$uri = \Rum::escape(\System\Web\WebApplicationBase::getInstance()->getPageURI($page, $args));
-			$title = \Rum::escape(\System\Web\WebApplicationBase::getInstance()->translator->get($title, $title));
 			return "<a href=\"{$uri}\" title=\"{$title}\" class=\"{$class}\">{$title}</a>";
 		}
 
@@ -236,22 +235,21 @@
 			{
 				foreach(\System\Web\WebApplicationBase::getInstance()->messages as $message)
 				{
-					$id = 'm' . uniqid();
 					if($message->type == \System\Base\AppMessageType::Fail())
 					{
-						$output .= "<li class=\"fail\" id=\"{$id}\" onclick=\"PHPRum.fadeOut(this);this.onclick=null;\">";
+						$output .= "<li class=\"fail\">";
 					}
 					elseif($message->type == \System\Base\AppMessageType::Warning())
 					{
-						$output .= "<li class=\"warning\" id=\"{$id}\" onclick=\"PHPRum.fadeOut(this);this.onclick=null;\">";
+						$output .= "<li class=\"warning\">";
 					}
 					elseif($message->type == \System\Base\AppMessageType::Success())
 					{
-						$output .= "<li class=\"success\" id=\"{$id}\" onclick=\"PHPRum.fadeOut(this);this.onclick=null;\">";
+						$output .= "<li class=\"success\">";
 					}
 					else
 					{
-						$output .= "<li class=\"info\" id=\"{$id}\" onclick=\"PHPRum.fadeOut(this);this.onclick=null;\">";
+						$output .= "<li class=\"info\">";
 					}
 
 					$output .= \nl2br(\Rum::escape($message->message)) . '</li>';
