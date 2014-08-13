@@ -1,20 +1,24 @@
-TODO
-====
-
-	Mobile css theme
-	move test outside
-	support for github
-
-Components (BOD)
-==========
-
-	- PDODataADapter
-	- MSSQLDataAdapter
-
-CONTROLS (BOD)
-========
-
 BUGS/ISSUES
 ===========
 
+	- fix CompareValidator
+
+NEW FEATURES
+============
+
+	[Due in v6.6]
+	- Validate GridViewControlBase objects with Validators?
+	- Model events should raise on GridView insertions
+
+	[Due in v7]
+	- Rem all backwards compatibility code
+	- ActiveRecordBase::gridview() column mapping
+	- ActiveRecord::gridview() filter mapping
+	- GridViewColumn ctors should be identical (requires breaking backwards compatability)
+	- Change GridViewColumn ctor parameter order
+
+KNOWN ISSUES
+============
+
 	ENT_QUOTES causes GridViewControls to fail epically
+	RequiredValidator does not work with ListBox when multiple=true

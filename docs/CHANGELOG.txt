@@ -3,7 +3,125 @@ Change log
 
 1. Version History
 
-version 6.4.15-beta - 02.20.13
+May 15, 2013 - retiring changelog, will use Git to log changes.
+
+version 6.5.0-beta-1.04 - 05.13.13
+	- fixed bug in ApplicationBase where clearing empty buffer on exception
+	- fixed bug in LoginForm where email address lookup was case sensitive
+	- fixed bug in DBCache where not caching
+	- fixed bug in FileTranslator where not caching
+	- fixed bug in FileTranslator where not comparing the correct language
+
+version 6.5.0-beta-1.03 - 04.12.13
+	- fixed bug in rum.js Rum.flash() where flashing duplicate messages
+	- fixed bug in rum.js Rum.flash() where dismiss link not working
+	- fixed bug in GridView Controls where not referencing Rum.evalAsync()
+	- replaced all unset($request[param]) back in UI controls (removed in 6.5.0-beta-1.00)
+	- updated copyright notice
+	- fixed bug in WebApplicationBase where converting Array to string on line 1247
+	- changed Rum:messages() no longer contains dismiss event
+
+version 6.5.0-beta-1.02 - 04.11.13
+	- changed rum.js
+		- added sendAsyncWithCallback(htto_request, url, params, method, callback)
+		- changed sendAsync(url, params, method) no longer accepts http request object
+	- changed ActiveRecordBase::all() and more() now support table.field syntax
+	- fixed bug in FileBrowser where uploaded files that contain an error are ignored as filesize is 0
+	- fixed bug in FileSizeValidator where files that are 0 bytes do not result in error
+	- patched source code in FileSizeValidator so code completion has appropriate description
+	- changed FileSizeValidator constructor now accepts minSize in KB
+	- removed WebControlBase::ajaxHTTPRequest
+	- changed TextBox, InputBase and ListBox combined ajaxPostBack and ajaxValidation events
+	- removed &__validation=1 from all controls
+	- fixed bug in Selectors: DateSelector, TimeSelector, and DateTimeSelector
+		- fixed bug in Selectors where setting onchange javascript event for null element when allowNull is false
+		- fixed bug in Selectors where ajax validation not sending entire value
+		- fixed bug in Selectors where ajax validation postback not being sent
+	- added DateRangeValidator (Steph)
+	- fixed bug in FileSizeValidator where always failing
+	- changed FileBrowser removed auto filesize validator
+	- fixed bug in WebApplicationBase where not logging ajax exceptions to the console
+
+version 6.5.0-beta-1.01 - 03.28.13
+	- added default class attribute to WebControlBase
+	- fixed bug in WebApplicationBase where not rendering async exceptions - now uses javascript popup
+	- async flash messages now render dismiss element
+	- fixed bug in TestCaseBase where setting dataAdapter when no dsn connection specified
+	- fixed bug in PageController when OS can't determine whether glob returned no results, or an error occurred
+	- fixed bug in GridView where setting filter values when value == ''
+	- removed Button::submitText
+	- fixed bug in ListControlBase where overwriting state if nothing submitted
+	- fixed bug in WeControlBase::setEnableViewState() where not cascading
+
+version 6.5.0-beta-1.00 - 03.11.13
+	- major change to js scripts (lighten output)
+		- shortened function names in js scripts
+		- removed button.js
+		- removed textbox.js
+		- combines page.js and form.js into rum.js
+		- removed Rum.fadeIn(), Rum.fadeOut(), Rum.setOpacity()
+		- removed js animations and message events (use JQuery instead)
+		- added js functions Rum.id(), added Rum.assert(), Rum.clear(), Rum.reset() Rum.flash(), Rum.forward()
+		- added Rum.sendAsync
+		- moved all js into single rum.js
+		- compress js scripts
+		- changed Rum.sendAsync now handles callback implementation
+		- Rum.assert() and Rum.clear() now set and remove invalid class
+		- remove auto dismiss on syncronous flash message
+	- removed all traces of __post from UI controls (lighten output)
+	- removed all unset($request[param]) from UI controls
+	- renamed Form::hiddenField to Form::honeyPot
+	- removed Button::$disableOnSubmit (use JQuery instead)
+	- removed Button::$submitText (use JQuery instead)
+	- removed TextBox::watermark (use JQuery instead)
+	- removed TextBox::multiline, use TextArea instead
+	- separated TextBox and TextArea
+	- added View::contentExpires
+	- added TextBox::placeholder
+	- added cache headers to assets
+
+version 6.4.18-rc2 - 03.01.13
+	- patched security hole in credentials where session could remain active after user authorization is revoked
+	- fixed bug in TableCredential where not using ActiveRecords to update source
+	- fixed bug in TableCredential where source contained multiple tables
+	- fixed bug in HTMLTestReporter where not loading resources
+	- added log levels to Authentication
+
+version 6.4.18-rc1 - 02.28.13
+	- changed .htaccess file to contain default page routings for web services
+	- changed WebService now handles format requests
+	- changed default content type for web services from text/html to application/xml
+	- changed default charset for web services from ISO to UTF-8
+
+version 6.4.17-rc2 - 02.28.13
+	- removed redundant JSONServiceBase
+	- changed RESTWebServiceBase now supports multiple content types
+	- changed RESTWebServiceBase now handles encoding completely
+	- changed URI rewriter no longer handles session id's
+	- fixed bug in WebApplicationBase where not referencing the post config request param
+
+version 6.4.17-rc1 - 02.25.13
+	- changed WebControlBase output to remove whitespace from HTML
+	- moved assets from the public folder, now served directly by the WebApplication
+	- changed asset install issue, no longer writes (installs) during runtime
+	- fixed bug in AppConfiguration where not reading the restrict property
+
+version 6.4.16-rc1 - 02.21.13
+	- fixed security exploit in FormsAuthentication where sending cookies without encrypting
+	- fixed security exploit in FormsAuthentication where not unsetting the session secret during signout
+	- fixed security exploit in FormsAuthentication where not using a timestamp to seed the secret
+	- fixed security exploit where session not timing out
+	- changed WebServiceAuthentication is now stateless, (use FormsAuthentication for SOAP web services)
+	- fixed bug in TableCredential when updating source where table source contains more than one table
+	- fixed bug in DBCache when creating cache table
+	- changed DBLogger and DBTranslator now set default table in constructor as default parameter
+	- fixed bug where missing plugins folder caused errors
+	- changed FileLogger, FileCache, and Build objects no longer create directories if not found
+	- fixed bug where absolute path to __ROOT__ was not being detected in console applications
+	- fixed bug in Get where not escaping paths
+	- fixed bug in Get where not update task not working
+
+version 6.4.15-beta - 02.19.13
 	- added command line package manager "get" (beta)
 	- fixed bug in model make script when not reporting correct error message if table doesn't exist
 	- changed make script no longer needs /app/config/make/config.php
