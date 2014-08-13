@@ -151,7 +151,7 @@
 							<li><a href="javascript:window.scrollTo(0,0)">What is rum?</a></li>
                             <li class="active"><a href="#benefits">Core benefits</a></li>
                             <li><a href="#docs">Docs</a></li>
-                            <li><a href="#meetteam">Team</a></li>
+                            <li><a href="#meetteam">About</a></li>
                             <li><a href="#download">Get rum</a></li>
                             <li><a href="#contactus">Contact</a></li>
                             <!--
@@ -243,7 +243,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/html5.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -259,7 +259,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-stat.png" alt=""  />                                 
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/clock.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -275,7 +275,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/pencil.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -291,7 +291,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/webservice.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -307,7 +307,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/tools_alt.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -323,7 +323,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt=""  />                                 
+                                    <img src="<?=\Rum::baseURI()?>/images/icons/configure.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -903,7 +903,7 @@
             <div class="container">                
                 <div class="row">
                     <div class="row teammemebers">
-                        <h2>The team</h2>
+                        <h2>About</h2>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="row">
@@ -926,7 +926,7 @@
                             </div>
                         </div>
 
-
+<!--
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
@@ -947,6 +947,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
+-->
 
 
                     </div>
