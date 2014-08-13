@@ -652,10 +652,12 @@ nav.navbar.blog {
     margin-left: 27px;
 }
 
-#newsletter .lform button {
+#newsletter .lform button,
+#newsletter .lform input[type="submit"] {
     width: 170px;
     height: 59px;
     border-radius: 8px;
+	color: #ffffff;
 }
 
 .newsletterdesc {

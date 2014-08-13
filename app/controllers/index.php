@@ -17,6 +17,20 @@
          */
         public function onPageInit($sender, $args)
         {
+			$this->page->add(new \System\Web\WebControls\Form('newsletter_form'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\TextBox('name'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\TextBox('email'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\Button('signup', 'Sign me up'));
         }
+
+		/**
+		 * on signup click
+		 * @param object $sender
+		 * @param array $args
+		 */
+		public function onSignupClick($sender, $args)
+		{
+			dmp('signup clicked');
+		}
     }
 ?>

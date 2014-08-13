@@ -449,11 +449,11 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="pull-left lform">
-                        <form role="form" class="form-inline ">
-                            <input type="text" class="form-control name " id="exampleInputName" placeholder="Name"> 
-                            <input type="text" class="form-control email " id="exampleInputEmail" placeholder="Email"> 
-                            <button type="submit" class="btn btn-default btn-lg pull-right">Sign Me Up</button>
-                        </form>
+						<?php $this->newsletter_form->start(array('role'=>'form','class'=>'form-inline'))?>
+							<?php $this->newsletter_form->name->render(array('class'=>'form-control name','placeholder'=>'Name'))?>
+							<?php $this->newsletter_form->email->render(array('class'=>'form-control email','placeholder'=>'Email'))?>
+							<?php $this->newsletter_form->signup->render(array('class'=>'btn btn-default btn-lg pull-right','text'=>'Sign me up'))?>
+                        <?php $this->newsletter_form->end()?>
                     </div>
                     <div class="clearfix"></div>
                 </div>
