@@ -18,9 +18,9 @@
         public function onPageInit($sender, $args)
         {
 			$this->page->add(new \System\Web\WebControls\Form('newsletter_form'));
-			$this->page->newsletter_form->add(new \System\Web\WebControls\TextBox('name'));
-			$this->page->newsletter_form->add(new \System\Web\WebControls\TextBox('email'));
-			$this->page->newsletter_form->add(new \System\Web\WebControls\Button('signup', 'Sign me up'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\Text('name'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\Text('email'));
+			$this->page->newsletter_form->add(new \System\Web\WebControls\Button('signup'));
         }
 
 		/**
@@ -28,9 +28,9 @@
 		 * @param object $sender
 		 * @param array $args
 		 */
-		public function onSignupClick($sender, $args)
+		public function onSignupAjaxClick($sender, $args)
 		{
-			dmp('signup clicked');
+			\Rum::trace('signup clicked');
 		}
     }
 ?>

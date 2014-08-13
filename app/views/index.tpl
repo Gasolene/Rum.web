@@ -452,7 +452,9 @@
 						<?php $this->newsletter_form->start(array('role'=>'form','class'=>'form-inline'))?>
 							<?php $this->newsletter_form->name->render(array('class'=>'form-control name','placeholder'=>'Name'))?>
 							<?php $this->newsletter_form->email->render(array('class'=>'form-control email','placeholder'=>'Email'))?>
-							<?php $this->newsletter_form->signup->render(array('class'=>'btn btn-default btn-lg pull-right','text'=>'Sign me up'))?>
+							<?php $this->newsletter_form->signup->begin(array('class'=>'btn btn-default btn-lg pull-right','value'=>'Sign me up'))?>
+								Sign me up
+							<?php $this->newsletter_form->end()?>
                         <?php $this->newsletter_form->end()?>
                     </div>
                     <div class="clearfix"></div>
@@ -920,7 +922,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4 ">
-                                    <img src="/theme1/images/team1.png" alt="" />                                 
+                                    <img src="<?=\Rum::baseURI()?>/images/profile.jpg" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
