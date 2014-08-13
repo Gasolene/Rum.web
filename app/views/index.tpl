@@ -29,7 +29,7 @@
 
                         <!-- First slide -->
                         <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#c3544e; " alt="">
+                            <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="" alt="">
                             <div class="caption sl_text sfl"
                                  data-x="71"
                                  data-y="90"
@@ -46,7 +46,14 @@
 
                             <div class="caption large_text fade"
                                  data-x="448"
-                                 data-y="155"
+                                 data-y="105"
+                                 data-speed="500"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="Dots"></div>
+
+                            <div class="caption large_text fade"
+                                 data-x="448"
+                                 data-y="55"
                                  data-speed="500"
                                  data-start="1000"
                                  data-easing="easeOutExpo"  >
@@ -55,7 +62,7 @@
 
                             <div class="caption sfb fade"
                                  data-x="448"
-                                 data-y="255"
+                                 data-y="155"
                                  data-speed="500"
                                  data-start="1000"
                                  data-easing="easeOutExpo"
@@ -118,250 +125,6 @@
 
                         </li> 
 
-
-
-                        <!-- Second slide -- >
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#c3544e; " alt="">
-                            <div class="caption sl_text sfl"
-                                 data-x="71"
-                                 data-y="90"
-                                 data-speed="300"
-                                 data-start="800"
-                                 data-easing="easeOutExpo"  >We make</div>
-
-                            <div class="caption sl_text2 sfr"
-                                 data-x="251"
-                                 data-y="90"
-                                 data-speed="300"
-                                 data-start="800"
-                                 data-easing="easeOutExpo"  >Mobile Apps</div>
-
-                            <div class="caption large_text fade"
-                                 data-x="448"
-                                 data-y="155"
-                                 data-speed="500"
-                                 data-start="1000"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="Dots"></div>
-
-                            <div class="caption sfb hidden-xs"
-                                 data-x="0"
-                                 data-y="240"
-                                 data-speed="300"
-                                 data-start="1400"
-                                 data-easing="easeOutExpo"  >
-                                <div class="sliderblock1">
-
-                                    <div class="text pull-left">
-                                        <h2>Camera <span>Pro</span></h2>
-
-                                        <p>A nice a easily useable Camera App, Edit your photos 
-                                            like a pro, 1000 Inbulit photo effects just for you.
-                                            Capture - Edit - Share like never before.</p>
-                                        <hr class="hidden-sm" />
-                                    </div>
-                                    <div class="camera pull-right hidden-sm">
-                                        <img src="<?=\Rum::config()->themes?>/theme1/images/lock.png" alt="" />                                 
-                                    </div>
-                                    <div class="clearfix"></div>
-
-                                </div>
-                            </div>
-
-                            <div class="caption sfb hidden-sm hidden-xs"
-                                 data-x="0"
-                                 data-y="420"
-                                 data-speed="300"
-                                 data-start="1400"
-                                 data-easing="easeOutExpo"  >
-                                <div class="sliderblock2">
-                                    <div class="sharrre-plugin">
-                                        <div class="twitter" data-url="http://www.angrybirds.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="Tweet"></div>
-                                        <div class="facebook" data-url="http://www.angrybirds.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="Like"></div>
-                                        <div class="googleplus" data-url="http://www.angrybirds.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="+1"></div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-
-                            </div>
-
-                            <div class="caption sfb"
-                                 data-x="540"
-                                 data-y="10"
-                                 data-speed="300"
-                                 data-start="1600"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/slider2.png" alt="Product1"></div>
-
-
-                        </li> 
-
-
-
-                        <!-- Third slide -- >
-
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                            <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#c3544e; " alt="">
-                            <div class="caption sl_text sfl"
-                                 data-x="71"
-                                 data-y="90"
-                                 data-speed="300"
-                                 data-start="800"
-                                 data-easing="easeOutExpo"  >We make</div>
-
-                            <div class="caption sl_text2 sfr"
-                                 data-x="251"
-                                 data-y="90"
-                                 data-speed="300"
-                                 data-start="800"
-                                 data-easing="easeOutExpo"  >Mobile Apps</div>
-
-                            <div class="caption large_text fade"
-                                 data-x="448"
-                                 data-y="155"
-                                 data-speed="500"
-                                 data-start="1000"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="Dots"></div>
-
-                            <div class="caption sfb hidden-xs"
-                                 data-x="0"
-                                 data-y="240"
-                                 data-speed="300"
-                                 data-start="1400"
-                                 data-easing="easeOutExpo"  >
-                                <div class="sliderblock1">
-
-                                    <div class="text pull-left">
-                                        <h2>What is <span>Rum</span></h2>
-
-															<p>Rum is not another MVC framework, here’s my philosophy...
-
-I’ve spent many years using various web frameworks in many languages and none of them could satisfy my need for a real modern HTML5 rapid development platform.  A tool where I can define the objects and relationships, and have the framework build and map all of the necessary HTML5, client side JavaScript, and AJAX hooks without sacrificing my ability to extend overwrite and customize the crap out of the the application.  I wanted to tell the framework I have an object, if its updated in the view by a human then update the database.  Simple!  Why do I have to write JavaScript AJAX postbacks then handle them on the server by parsing requests, validating, authenticating, cleaning and updating database objects?
-
-I’ve studied architecture of many great frameworks and analyzed what works and I believe I have created just that tool.  The result is pure semantic HTML5 markup that is 100% jQuery-able.  You place a basic HTML5 element somewhere in the view and extend it’s UI behavior with jQuery.  The HTML5 element then interacts directly with the model to update and interact with any data source without writing any code.  A model can represent a table, a database record, a form, an array, or just about anything.
-
-No routing tables, no complex config/env files, no div containers or special classes.  No validating request arrays, no updating databases manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.  Deploy right from GIT to multiple environments.</p>
-                                        <hr class="hidden-sm" />
-                                    </div>
-                                    <div class="camera pull-right hidden-sm">
-                                        <img src="<?=\Rum::config()->themes?>/theme1/images/note.png" alt="Camera" />                                 
-                                    </div>
-
-                                    <div class="clearfix"></div>
-
-                                </div>
-                            </div>
-
-                            <div class="caption sfb hidden-sm hidden-xs"
-                                 data-x="0"
-                                 data-y="420"
-                                 data-speed="300"
-                                 data-start="1400"
-                                 data-easing="easeOutExpo"  >
-                                <div class="sliderblock2">
-                                    <div class="sharrre-plugin">
-                                        <div class="twitter" data-url="http://www.cokolloo.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="Tweet"></div>
-                                        <div class="facebook" data-url="http://www.cokolloo.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="Like"></div>
-                                        <div class="googleplus" data-url="http://www.cokolloo.com/" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="+1"></div>
-                                    </div>
-                                    <div class="clearfix"></div>                                 
-                                </div>
-
-                            </div>
-
-                            <div class="caption sfb"
-                                 data-x="540"
-                                 data-y="126"
-                                 data-speed="300"
-                                 data-start="1600"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/slider3_01.png" alt="Product1"></div>
-
-                            <div class="caption sfb"
-                                 data-x="694"
-                                 data-y="36"
-                                 data-speed="300"
-                                 data-start="1800"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/slider3_02.png" alt="Product 2"></div>
-                        </li>
-
--->
-                        <!--
-                                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                                                    <img src="<?=\Rum::config()->themes?>/theme1/images/transparent.png" style="background-color:#c3544e; "  alt="" >
-                                                    <div class="caption sl_text sfl"
-                                                         data-x="121"
-                                                         data-y="140"
-                                                         data-speed="300"
-                                                         data-start="800"
-                                                         data-easing="easeOutExpo"  >We make</div>
-                        
-                                                    <div class="caption sl_text2 sfr"
-                                                         data-x="301"
-                                                         data-y="140"
-                                                         data-speed="300"
-                                                         data-start="800"
-                                                         data-easing="easeOutExpo"  >Mobile Apps</div>
-                        
-                                                    <div class="caption large_text fade"
-                                                         data-x="498"
-                                                         data-y="205"
-                                                         data-speed="500"
-                                                         data-start="1000"
-                                                         data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/dots.png" alt="Dots"></div>
-                        
-                                                    <div class="caption sfb"
-                                                         data-x="50"
-                                                         data-y="290"
-                                                         data-speed="300"
-                                                         data-start="1400"
-                                                         data-easing="easeOutExpo"  >
-                                                        <div class="sliderblock1">
-                        
-                                                            <div class="text pull-left">
-                                                                <h2>Camera <span>Pro</span></h2>
-                        
-                                                                <p>A nice a easily useable Camera App, Edit your photos 
-                                                                    like a pro, 1000 Inbulit photo effects just for you.
-                                                                    Capture - Edit - Share like never before.</p>
-                                                                <hr />
-                                                            </div>
-                                                            <div class="camera pull-right">
-                                                                <img src="<?=\Rum::config()->themes?>/theme1/images/camera.png" alt="Camera" />                                 
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="caption sfb"
-                                                         data-x="50"
-                                                         data-y="470"
-                                                         data-speed="300"
-                                                         data-start="1400"
-                                                         data-easing="easeOutExpo"  >
-                                                        <div class="sliderblock2">
-                        
-                                                            <div class="clearfix"></div>
-                                                        </div>
-                        
-                                                    </div>
-                        
-                                                    <div class="caption sfb"
-                                                         data-x="590"
-                                                         data-y="176"
-                                                         data-speed="300"
-                                                         data-start="1600"
-                                                         data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/sliderproduct1.png" alt="Product1"></div>
-                        
-                                                    <div class="caption sfb"
-                                                         data-x="744"
-                                                         data-y="86"
-                                                         data-speed="300"
-                                                         data-start="1800"
-                                                         data-easing="easeOutExpo"  ><img src="<?=\Rum::config()->themes?>/theme1/images/sliderproduct2.png" alt="Product 2"></div>
-                                                </li>
-                        -->
-
-
                     </ul>
                     <div class="tp-bannertimer"></div>
                 </div>
@@ -385,11 +148,11 @@ No routing tables, no complex config/env files, no div containers or special cla
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-							<li><a href="#home">What is rum?</a></li>
-                            <li class="active"><a href="#benifits">Core benifits</a></li>
+							<li><a href="javascript:window.scrollTo(0,0)">What is rum?</a></li>
+                            <li class="active"><a href="#benefits">Core benefits</a></li>
                             <li><a href="#docs">Docs</a></li>
                             <li><a href="#meetteam">Team</a></li>
-                            <li><a href="#blog">Get rum</a></li>
+                            <li><a href="#download">Get rum</a></li>
                             <li><a href="#contactus">Contact</a></li>
                             <!--
                             <li class="dropdown">
@@ -469,12 +232,12 @@ No routing tables, no complex config/env files, no div containers or special cla
             <div class="container ">                
                 <div class="row">
                     <div class="row">
-                        <h2>Core benifits?</h2>
+                        <h2>Core benefits?</h2>
 
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Pure HTML5</h3>
+                                    <h3>Pure semantic HTML5</h3>
                                     <p>You place a basic HTML5 element somewhere in the view and extend it’s UI behavior with jQuery
                                     </p>
                                     <hr />
@@ -490,56 +253,8 @@ No routing tables, no complex config/env files, no div containers or special cla
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Instant AJAX updating</h3>
-                                    <p>Like a desktop environment, view components can be updated by model objects without writing any HTML, Javascript, or custom PHP code
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt="" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Write less code</h3>
-                                    <p>Write less code (i mean it) - no more writing menial repetitive code for parsing requests, authenticating, validating, cleaning and updating database objects
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Integrated unit tests</h3>
-                                    <p>Built in unit tests
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
                                     <h3>Rapid prototyping</h3>
-                                    <p>I mean rapid.  Create a full featured blog in less than 20 lines of code
+                                    <p>I mean rapid.  Create a full featured responsive AJAX blog in less than 20 lines of code
                                     </p>
                                     <hr />
                                 </div>
@@ -554,8 +269,56 @@ No routing tables, no complex config/env files, no div containers or special cla
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>Write less code</h3>
+                                    <p>No more writing menial repetitive code for handling requests, validating input, preparing SQL queries, and formatting HTML responses
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-clock.png" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>RESTful</h3>
+                                    <p>Write stateless RESTful web services with clean URLs
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-relaod.png" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>Integrated unit tests</h3>
+                                    <p>Write automated unit test and controller test scripts
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::config()->themes?>/theme1/images/icon-email.png" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
                                     <h3>Automated deployment tools</h3>
-                                    <p>supports multiple dev and production environments
+                                    <p>Write automated deployment scripts to manager multiple environments over SSH
                                     </p>
                                     <hr />
                                 </div>
@@ -603,7 +366,7 @@ No routing tables, no complex config/env files, no div containers or special cla
                 </div>
             </div>
         </div>
-design, build, test, deploy, repeat
+
         <!-- END benefits section -->
 
         <!-- benefits section -->
@@ -612,7 +375,7 @@ design, build, test, deploy, repeat
             <div class="container ">                
                 <div class="row">
                     <div class="row">
-                        <h2>What is rum?</h2>
+                        <h2>Docs?</h2>
 
 
 
@@ -1186,49 +949,6 @@ design, build, test, deploy, repeat
                         </div>
 
 
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-xs-7 col-sm-8 col-lg-8 col-md-7 teamdesc">
-                                    <h3>Robert Doe</h3>
-                                    <p class="position">Designer</p>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden.
-                                    </p>
-                                    <p class="sociallinks">
-                                        <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/team3.png" alt="" />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="row">
-                                <div class="col-xs-7 col-sm-8 col-lg-8 col-md-7 teamdesc">
-                                    <h3>Israel Collazo</h3>
-                                    <p class="position">Developer</p>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden.
-                                    </p>
-                                    <p class="sociallinks">
-                                        <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="<?=\Rum::config()->themes?>/theme1/images/team4.png" alt="" />                                 
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -1236,7 +956,7 @@ design, build, test, deploy, repeat
         <!-- END meet the team -->
 
         <!-- Blog -->
-        <div id="blog">
+        <div id="download">
             <div class="container">                
                 <div class="row">
 					
@@ -1244,28 +964,31 @@ design, build, test, deploy, repeat
                     <div class="row bloginfo">
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post1">
                             <h3>License</h3>
-                            <p>This software is released under the terms of the gnu lesser gerneral public license.	See /docs/GNU.txt for the complete license.</p>
-							<p class="author"><i class="fa fa-user"></i> <a style="color:black;" href="#">Download license</a></p>
+                            <p>This software is released under the terms of the gnu lesser general public license.	See /docs/GNU.txt for the complete license.</p>
+							<p><i class="fa fa-user"></i> <a href="#">Download license</a></p>
 							<h3>Software disclaimer</h3>
                             <p>Software downloaded from the php.rum web site is provided 'as is' without warranty of any kind, either express or implied. We assume no responsibility for damage, loss of data, or security breaches of any kind. Use at your own risk!</p>
+							
                         </div>
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post2">
                             <h3>Minimum requirements</h3>
 								<ul>
 									<li>PHP version 5.3.8 or later</li>
-									<li>Supported databases: PDO, MySQL (4.1+), MySQLi, MSSQL</li>
+									<li>Supported web servers: Apache 2.x, IIS6+</li>
+									<li>Supported databases: MySQL (4.1+), ODBC, Microsoft SQL Server, PostgreSQL, Oracle</li>
 								</ul>
 							<h3>Windows users...</h3>
-							<p>You will need to download and unpack these 3 stand alone executables in your application root directory in order to use the command line tools (optional): putty.exe, plink.exe, and unzip.exe</p>
-							<div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
+							<p>You will need to download and unpack these 3 stand alone executables in your application root directory in order to use the command line tools (optional): 
+<a target="_blank" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Putty.exe</a>,
+<a target="_blank" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Plink.exe</a>, and
+<a target="_blank" href="http://gnuwin32.sourceforge.net/packages/unzip.htm">Unzip.exe</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 moreblog">
-                            <h3>Patches &amp; Updates</h3>
-							
+                            <div class="pull-left limg"><img src="<?=\Rum::config()->themes?>/theme1/images/box.png" alt="" /></div>
+							<div style="clear:left;"></div>
                             <ul>
-                                <li><a href="#">Version 6.6 update</a></li>
-                                <li><a href="#">Version 6.5 update</a></li>
-								<li><a href="#">Version 6.4 update</a></li>
+                                <li><a href="#">Patches &amp; Updates</a></li>
+								<li><a href="#">Blog Demo</a></li>
 								<li><a href="#">Archive</a></li>
                             </ul>
                         </div>

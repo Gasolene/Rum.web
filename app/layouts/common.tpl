@@ -7,7 +7,7 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="ico/favicon.png">
 
-        <title>EsY App</title>
+        <title>PHP rum</title>
 
         <!-- Bootstrap core CSS -->
         <link href="<?=\Rum::config()->themes?>/theme1/css/bootstrap.css" rel="stylesheet">

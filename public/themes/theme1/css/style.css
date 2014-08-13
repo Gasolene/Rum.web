@@ -21,7 +21,7 @@ body {
 }
 
 a {
-    color: #fff;
+    color: #ff0000;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
 }
@@ -411,7 +411,7 @@ nav.navbar.blog {
     background-color: #41474c;
 }
 
-#benefits img, #meetteam img, #blog img{
+#benefits img, #meetteam img, #download img{
     width: 100%;
 }
 
@@ -817,32 +817,32 @@ nav.navbar.blog {
 /* blog */
 /********/
 
-#blog {
+#download {
     background-color: #f5f5f5;
 }
 
-#blog h2 {
+#download h2 {
     color: #41474c;
     text-align:left;
     margin: 140px 0 70px 0;
 }
 
-#blog h2 span {
+#download h2 span {
     font-weight: bold;
 }
 
-#blog h3 {
+#download h3 {
     color: #41474c;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
 
-#blog p.author {
+#download p.author {
     color: #41474c;
 
 }
 
-#blog .bloginfo {
+#download .bloginfo {
     margin-bottom: 140px;
 }
 
@@ -1438,7 +1438,7 @@ h4.modal-title span {
 /* Blog page */
 /*************/
 
-.blog #blog {
+.blog #download {
     background-color: #fff;
 }
 
@@ -1446,7 +1446,7 @@ h4.modal-title span {
     background-color: #f5f5f5;
 }
 
-.blog #blog h2 {
+.blog #download h2 {
     margin: 210px 0 70px 0;
 }
 
@@ -1454,18 +1454,18 @@ h4.modal-title span {
     margin-top: 70px;
 }
 
-.blog #blog h3.tags {
+.blog #download h3.tags {
     border-bottom: none;
 }
 
-.blog #blog .tags li {
+.blog #download .tags li {
     display: inline-block;
     border-bottom: none;
     line-height: 3;
     margin-right: 15px;
 }
 
-.blog #blog .tags li a {
+.blog #download .tags li a {
     display: inline;
     padding: 1em 1.4em;
     font-size: 14px;
@@ -1479,7 +1479,7 @@ h4.modal-title span {
     background-color: #41474c;
 }
 
-.blog #blog .postdate {
+.blog #download .postdate {
     width: 70px;
     height: 70px;
     border: solid 1px #e1e7eb;
@@ -1489,30 +1489,30 @@ h4.modal-title span {
     text-align: center;
 }
 
-.blog #blog .postdate .month {
+.blog #download .postdate .month {
     height: 23px;
     line-height: 23px;
     border-bottom: solid 1px #e1e7eb;
 }
 
-.blog #blog .postdate .day {
+.blog #download .postdate .day {
     color: #41474c;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     padding-top: 3px;
 }
 
-.blog #blog .posttext {
+.blog #download .posttext {
     width: 87%;    
 }
 
-.blog #blog .posttext  h3 {
+.blog #download .posttext  h3 {
     margin-top: 30px;
     margin-bottom: 25px;
 }
 
 
-.blog #blog .shareit span {
+.blog #download .shareit span {
     box-sizing: content-box;
     /*    height: 3em;
         line-height: 3em;
@@ -1520,15 +1520,15 @@ h4.modal-title span {
         vertical-align: middle;*/
 }
 
-.blog #blog .postbot {
+.blog #download .postbot {
     margin-top: 20px;
 }
 
-.blog #blog .numcomments {
+.blog #download .numcomments {
     margin-top: 70px;
 }
 
-.blog #blog .numcomments h4 {
+.blog #download .numcomments h4 {
     margin: 0;
     color: #41474c;
     font-family: 'Montserrat', sans-serif;
@@ -1536,23 +1536,23 @@ h4.modal-title span {
 }
 
 
-.blog #blog .numcomments .pull-right i {
+.blog #download .numcomments .pull-right i {
     color: #242424;    
     font-size: 14px;
 }
 
-.blog #blog .numcomments .pull-right a {
+.blog #download .numcomments .pull-right a {
     color: #242424;
     font-size: 14px;
     font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
 }
 
-.blog #blog .avatar {
+.blog #download .avatar {
     width: 70px;
 }
 
 
-.blog #blog .avatarright {
+.blog #download .avatarright {
     width: 700px;
     padding-left: 30px;
     color: #919191;
@@ -1560,41 +1560,41 @@ h4.modal-title span {
     font-size: 14px;
 }
 
-.blog #blog .comment {
+.blog #download .comment {
     margin-top: 30px;
 }
 
-.blog #blog .comment .heading {
+.blog #download .comment .heading {
     margin-bottom: 30px;
 }
 
-.blog #blog .comment .heading .name {
+.blog #download .comment .heading .name {
     color: #41474c;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 
 }
 
-.blog #blog .comment .heading .date {
+.blog #download .comment .heading .date {
     color: #b3b2b2;
     font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
     font-size: 14px;
 
 }
 
-.blog #blog .comment .reply {
+.blog #download .comment .reply {
     margin-top: 30px;
 }
 
-.blog #blog .comment .reply a, 
-.blog #blog .comment .reply a:hover {
+.blog #download .comment .reply a, 
+.blog #download .comment .reply a:hover {
     color: #242424;
     font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
     font-size: 14px;
 
 }
 
-.blog #blog .comment .reply i {
+.blog #download .comment .reply i {
     color: #242424;
     font-size: 14px;
 }
@@ -1614,11 +1614,11 @@ h4.modal-title span {
     margin-bottom: 30px;
 }
 
-.blog #blog .comment img {
+.blog #download .comment img {
     border-radius: 50%;
 }
 
-.blog #blog .bloginfo hr {
+.blog #download .bloginfo hr {
     margin-top: 30px;
     margin-bottom: 0;
     border: 0;
@@ -1653,7 +1653,7 @@ h4.modal-title span {
 }
 
 
-.blog #blog .bloginfo {
+.blog #download .bloginfo {
     margin-bottom: 0px;
 }
 
@@ -1751,7 +1751,7 @@ h4.modal-title span {
     }
 
 
-    .blog #blog .avatarright {
+    .blog #download .avatarright {
         width: 550px;
     }
 }
@@ -1886,11 +1886,11 @@ h4.modal-title span {
         margin-top: 10px;
     }
 
-    .blog #blog .posttext {
+    .blog #download .posttext {
         width: 80%;
     }
 
-    .blog #blog .avatarright {
+    .blog #download .avatarright {
         width: 400px;
     }
 
@@ -1950,9 +1950,9 @@ h4.modal-title span {
         padding-left: 15px;
     }
 
-    #blog .post1,
-    #blog .post2,
-    #blog .moreblog {
+    #download .post1,
+    #download .post2,
+    #download .moreblog {
         margin-top: 70px;
     }
 
@@ -2070,11 +2070,11 @@ h4.modal-title span {
     }
 
 
-    .blog #blog .posttext {
+    .blog #download .posttext {
         width: 100%;
     }
 
-    .blog #blog .avatarright {
+    .blog #download .avatarright {
         width: 100%;
         padding-left: 0;
         padding-top: 30px;
