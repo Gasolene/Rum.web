@@ -1,9 +1,9 @@
         <header>
             <div id="topheader-to-offset" class="container">
                 <div class="topline row">
-                    <div class="hidden-xs col-sm-6 col-md-6 col-lg-7 nopadl"><i class="fa fa-envelope bigicon"></i> <span><a href="mailto:someone@gmail.com">someone@gmail.com</a></span> <i class="fa fa-phone bigicon"></i> <span>+458 568 479 312</span></div>
+                    <div class="hidden-xs col-sm-6 col-md-6 col-lg-7 nopadl"><i class="fa fa-envelope bigicon"></i> <span><a href="#contactme">contact me</a></span></div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 nopadr">
-                        <div class="icons hidden-xs">
+                        <div class="icons hidden-xs pull-right">
                             <a href="#"><i class="fa fa-facebook-square"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-google-plus"></i></a>
@@ -11,7 +11,7 @@
                             <a href="#"><i class="fa fa-cloud"></i></a>
                             <a href="#"><i class="fa fa-rss"></i></a>
                         </div>
-                        <div class="search pull-right">
+<!--                        <div class="search pull-right">
                             <div class="search-input">
                                 <form role="form">
                                     <input type="text" class="form-control" id="exampleInputSearch" placeholder="Search"> 
@@ -19,7 +19,7 @@
                             </div>
                             <a href="#"><i class="fa fa-search bigicon"></i> </a>        
                             <hr>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                  data-y="105"
                                  data-speed="500"
                                  data-start="1000"
-                                 data-easing="easeOutExpo"  ><img src="/theme1/images/dots.png" alt="Dots"></div>
+                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::baseURI()?>/images/dots.png" alt="Dots"></div>
 
                             <div class="caption large_text fade"
                                  data-x="448"
@@ -85,7 +85,7 @@
 									 manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.
 								 </p>
 								 <p>
-									 <a href="#">Continue...</a>
+									 <a href="#benefits">Continue...</a>
 								 </p>
 							</div>
 
@@ -168,7 +168,7 @@
                             -->
                         </ul>
                         <form class="navbar-form navbar-right" role="search">
-                            <button type="submit" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Download Now</button>
+                            <a type="button" class="btn btn-default btn-lg" href="#download">Download Now</a>
                         </form>
 
                         <!--
@@ -359,7 +359,7 @@
                     </div>
                     <div class="quotebutton">
                         <form>
-                            <button type="submit" class="btn btn-transparent btn-lg">Download now</button>
+                            <a type="submit" class="btn btn-transparent btn-lg" href="#download">Download now</a>
                         </form>
                     </div>
                     <div class="clearfix"></div>
@@ -452,9 +452,9 @@
 						<?php $this->newsletter_form->start(array('role'=>'form','class'=>'form-inline'))?>
 							<?php $this->newsletter_form->name->render(array('class'=>'form-control name','placeholder'=>'Name'))?>
 							<?php $this->newsletter_form->email->render(array('class'=>'form-control email','placeholder'=>'Email'))?>
-							<?php $this->newsletter_form->signup->begin(array('class'=>'btn btn-default btn-lg pull-right','value'=>'Sign me up'))?>
+							<?php $this->newsletter_form->signup->begin(array('class'=>'btn btn-default btn-lg pull-right'))?>
 								Sign me up
-							<?php $this->newsletter_form->end()?>
+							<?php $this->newsletter_form->signup->end()?>
                         <?php $this->newsletter_form->end()?>
                     </div>
                     <div class="clearfix"></div>
@@ -902,7 +902,7 @@
         <!-- meet the team -->
 
         <div id="meetteam">
-            <div class="container">                
+            <div class="container">
                 <div class="row">
                     <div class="row teammemebers">
                         <h2>About</h2>
@@ -958,17 +958,17 @@
         </div>
         <!-- END meet the team -->
 
-        <!-- Blog -->
+        <!-- Download -->
         <div id="download">
             <div class="container">                
                 <div class="row">
 					
-                    <h2><button type="submit" class="btn btn-default btn-lg pull-right">Download now</button>get <span>rum</span></h2>
+                    <h2><a type="button" class="btn btn-default btn-lg pull-right" href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download now</a>get <span>rum</span></h2>
                     <div class="row bloginfo">
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post1">
                             <h3>License</h3>
                             <p>This software is released under the terms of the gnu lesser general public license.	See /docs/GNU.txt for the complete license.</p>
-							<p><i class="fa fa-user"></i> <a href="#">Download license</a></p>
+							<p><i class="fa fa-user"></i> <a target="_blank" href="<?=\Rum::baseURI()?>/docs/GNU.txt">Download license</a></p>
 							<h3>Software disclaimer</h3>
                             <p>Software downloaded from the php.rum web site is provided 'as is' without warranty of any kind, either express or implied. We assume no responsibility for damage, loss of data, or security breaches of any kind. Use at your own risk!</p>
 							
@@ -976,7 +976,7 @@
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post2">
                             <h3>Minimum requirements</h3>
 								<ul>
-									<li>PHP version 5.3.8 or later</li>
+									<li>PHP version <?=\Rum::config()->appsettings["min_php_ver"]?> or later</li>
 									<li>Supported web servers: Apache 2.x, IIS6+</li>
 									<li>Supported databases: MySQL (4.1+), ODBC, Microsoft SQL Server, PostgreSQL, Oracle</li>
 								</ul>
@@ -987,12 +987,15 @@
 <a target="_blank" href="http://gnuwin32.sourceforge.net/packages/unzip.htm">Unzip.exe</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 moreblog">
-                            <div class="pull-left limg"><img src="/theme1/images/box.png" alt="" /></div>
+                            <h3>Patches &amp; Updates</h3>
 							<div style="clear:left;"></div>
                             <ul>
-                                <li><a href="#">Patches &amp; Updates</a></li>
-								<li><a href="#">Blog Demo</a></li>
-								<li><a href="#">Archive</a></li>
+                                <li><a href="#">Current stable 6.5 php_rum_v6_6_release.tar (alpha, be warned)</a></li>
+								<li><a href="#">Old stable 6.4 php_rum_v6_5_release.tar (latest stable release)</a></li>
+								<li><a href="#">php_rum_v6_4_release.tar</a></li>
+								<li><a href="#">Older versions</a></li>
+								<li><a href="#">blog_demo.tar</a></li>
+								<li><a href="#">hello_world.tar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1022,12 +1025,14 @@
                 </div>                    
                 <div class="row">
                     <div class="col-lg-offset-1 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-2 col-sm-8 col-xs-12">
-                        <form role="form">
-                            <input type="text" class="form-control namebot" id="exampleInputNameBot" placeholder="Name"> 
-                            <input type="text" class="form-control emailbot " id="exampleInputEmailBot" placeholder="Email"> 
-                            <textarea name="message" id="message" class="form-control" rows="3" placeholder="Message"></textarea>
-                            <button type="submit" class="btn btn-transparent">Submit</button>
-                        </form>
+						<?php $this->contact_form->start(array('role'=>'form'))?>
+							<?php $this->contact_form->name->render(array('class'=>'form-control namebot','placeholder'=>'Name'))?>
+							<?php $this->contact_form->email->render(array('class'=>'form-control emailbot','placeholder'=>'Email'))?>
+							<?php $this->contact_form->message->render(array('class'=>'form-control','rows'=>'3','placeholder'=>'Message'))?>
+							<?php $this->contact_form->submit->begin(array('class'=>'btn btn-transparent'))?>
+								Submit
+							<?php $this->contact_form->submit->end()?>
+                        <?php $this->contact_form->end()?>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
                         <h3>Social Networks</h3>
@@ -1054,3 +1059,9 @@
                 </div>
             </div>
         </div>
+
+	<script>
+		<?php foreach(\Rum::messages() as $message) : ?>
+		Rum.flash('<?=$message->message?>', '<?=$message->type?>');
+		<?php endforeach; ?>
+	</script>

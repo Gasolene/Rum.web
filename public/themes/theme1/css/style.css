@@ -108,6 +108,10 @@ header .topline {
     border-bottom: solid 1px #e07771;
 }
 
+header .topline a {
+    color: #ffffff;
+}
+
 header .topline .search input {
     width: 140px;
     background: none;

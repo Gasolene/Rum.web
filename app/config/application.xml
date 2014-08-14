@@ -24,6 +24,8 @@
                                value = "6_5" />
     <add                         key = "current_version_name"
                                value = "6.5" />
+    <add                         key = "admin_email"
+                               value = "gasolene@gmail.com" />
   </app-settings>
 
   <!--
