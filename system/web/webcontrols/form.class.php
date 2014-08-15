@@ -22,7 +22,6 @@
 	 * @property string $encodeType form encoding type
 	 * @property string $forward controller to forward to
 	 * @property bool $ajaxPostBack specifies whether to perform ajax postback, Default is false
-	 * @property bool $ajaxValidation specifies whether to perform ajax validation, Default is false
 	 * @property string $honeyPot specifies the content of the honeypot field
 	 * @property string $submitted specifies if form was submitted
 	 * @property RequestParameterCollection $parameters form parameters
@@ -69,12 +68,6 @@
 		 * @var bool
 		 */
 		protected $ajaxPostBack			= false;
-
-		/**
-		 * turn on or off ajax validation
-		 * @var bool
-		 */
-		protected $ajaxValidation		= false;
 
 		/**
 		 * specifies whether to check for hidden field before processing request
@@ -181,7 +174,7 @@
 			}
 			elseif( $field === 'ajaxValidation' )
 			{
-				$this->setAjaxValidation($value);
+				trigger_error("Form::ajaxValidation is deprecated, use ValidationMessage instead", E_USER_DEPRECATED);
 			}
 			elseif( $field === 'autoFocus' )
 			{
@@ -245,10 +238,6 @@
 			elseif( $field === 'ajaxPostBack' )
 			{
 				return $this->ajaxPostBack;
-			}
-			elseif( $field === 'ajaxValidation' )
-			{
-				return $this->ajaxValidation;
 			}
 			elseif( $field === 'honeyPot' )
 			{
@@ -368,6 +357,7 @@
 		 */
 		public function start( $args = array() )
 		{
+			trigger_error("Form::start() is deprecated, use Form::begin() instead", E_USER_DEPRECATED);
 			$this->begin( $args );
 		}
 
@@ -704,7 +694,7 @@
 		 *
 		 * @param  bool $ajaxValidation ajax validation state
 		 * @return void
-		 */
+		 * /
 		private function setAjaxValidation($ajaxValidation = true)
 		{
 			$this->ajaxValidation = (bool)$ajaxValidation;
@@ -716,5 +706,6 @@
 				}
 			}
 		}
+		*/
 	}
 ?>

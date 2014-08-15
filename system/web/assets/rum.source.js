@@ -24,7 +24,13 @@
 		 * Specifies the default ajax start handler
 		 * @param params parameters
 		 */
-		this.defaultAjaxStartHandler = function(params){console.log('start');};
+		this.defaultFlashHandler = function(message, type){alert(message);};
+
+		/**
+		 * Specifies the default ajax start handler
+		 * @param params parameters
+		 */
+		this.defaultAjaxStartHandler = function(params){};
 
 		/**
 		 * Specifies the default ajax completion handler
@@ -74,19 +80,8 @@
 		 * @param type message type
 		 * @param delay delay in seconds
 		 */
-		this.flash = function(message, type, delay) {
-			if(!delay) delay = 3000;
-			if(this.id('messages')) {
-				var li = document.createElement('li');
-				var text = document.createTextNode(message);
-				li.setAttribute('class', type);
-//				addListener(a, 'click', function(){li.style.display='none';});
-				li.appendChild(text);
-				this.id('messages').appendChild(li);
-				setTimeout(function() {
-					fadeOut(li);
-				}, delay);
-			}
+		this.flash = function(message, type) {
+			this.defaultFlashHandler(message, type);
 		};
 
 
@@ -278,7 +273,7 @@
 		 * Funciton to assert a Validation Message
 		 * @param id element id
 		 * @param msg message
-		 */
+		 * /
 		this.assert = function(id, msg) {
 			if(this.id(id)) {
 				if(this.id(id).className.indexOf(" invalid") === -1) {
@@ -288,12 +283,13 @@
 			}
 			this.reset();
 		};
+		*/
 
 
 		/**
 		 * Funciton to clear Validation Message
 		 * @param id element id
-		 */
+		 * /
 		this.clear = function( id ) {
 			if(this.id(id)) {
 				if(this.id(id+"__err")) {
@@ -303,6 +299,7 @@
 			}
 			this.reset();
 		};
+		*/
 
 
 		/**
