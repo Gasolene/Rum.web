@@ -1,7 +1,7 @@
         <header>
             <div id="topheader-to-offset" class="container">
                 <div class="topline row">
-                    <div class="hidden-xs col-sm-6 col-md-6 col-lg-7 nopadl"><i class="fa fa-envelope bigicon"></i> <span><a href="#contactme">contact me</a></span></div>
+                    <div class="hidden-xs col-sm-6 col-md-6 col-lg-7 nopadl"><i class="fa fa-envelope bigicon"></i> <span><a href="#contactus">contact me</a></span></div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 nopadr">
                         <div class="icons hidden-xs pull-right">
                             <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -29,7 +29,7 @@
 
                         <!-- First slide -->
                         <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                            <img src="/theme1/images/transparent.png" style="" alt="">
+                            <img src="/theme1/resources/images/transparent.png" style="" alt="">
                             <div class="caption sl_text sfl"
                                  data-x="71"
                                  data-y="90"
@@ -49,7 +49,7 @@
                                  data-y="105"
                                  data-speed="500"
                                  data-start="1000"
-                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::baseURI()?>/images/dots.png" alt="Dots"></div>
+                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::baseURI()?>/resources/images/dots.png" alt="Dots"></div>
 
                             <div class="caption large_text fade"
                                  data-x="448"
@@ -148,11 +148,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-							<li><a href="javascript:window.scrollTo(0,0)">What is rum?</a></li>
                             <li class="active"><a href="#benefits">Core benefits</a></li>
-                            <li><a href="#docs">Docs</a></li>
-                            <li><a href="#meetteam">About</a></li>
+							<li><a href="#newsletter">Newsletter</a></li>
+                            <li><a href="#download">Docs</a></li>
                             <li><a href="#download">Get rum</a></li>
+                            <!--<li><a href="#meetteam">About</a></li>-->
                             <li><a href="#contactus">Contact</a></li>
                             <!--
                             <li class="dropdown">
@@ -168,7 +168,7 @@
                             -->
                         </ul>
                         <form class="navbar-form navbar-right" role="search">
-                            <a type="button" class="btn btn-default btn-lg" href="#download">Download Now</a>
+                            <a type="button" class="btn btn-default btn-lg" href="#download">Get Rum</a>
                         </form>
 
                         <!--
@@ -243,7 +243,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/html5.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/html5.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -259,7 +259,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/clock.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/clock.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -275,7 +275,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/pencil.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/pencil.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -291,7 +291,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/webservice.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/webservice.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -307,7 +307,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/tools_alt.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/tools_alt.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -323,7 +323,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/configure.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/configure.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -371,7 +371,7 @@
 
         <!-- benefits section -->
 
-        <div id="docs">
+<!--        <div id="docs">
             <div class="container ">                
                 <div class="row">
                     <div class="row">
@@ -388,7 +388,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/doc.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -404,7 +404,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/doc.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/doc.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -420,7 +420,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/images/icons/search.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/search.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -428,10 +428,8 @@
 
                     </div>
                 </div>            
-
-                <div class="row projectline">
             </div>
-        </div>
+        </div>-->
 
         <!-- END benefits section -->
 
@@ -445,11 +443,11 @@
                             <p>Are you a developer? I would be happy to provide one on one support.</p>
                             <hr />
                         </div>
-                        <div class="pull-left limg"><img src="<?=\Rum::baseURI()?>/images/icons/box.png" alt="" /></div>
+                        <div class="pull-left limg"><img src="<?=\Rum::baseURI()?>/resources/images/icons/box.png" alt="" /></div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="pull-left lform">
-						<?php $this->newsletter_form->start(array('role'=>'form','class'=>'form-inline'))?>
+						<?php $this->newsletter_form->begin(array('role'=>'form','class'=>'form-inline'))?>
 							<?php $this->newsletter_form->name->render(array('class'=>'form-control name','placeholder'=>'Name'))?>
 							<?php $this->newsletter_form->email->render(array('class'=>'form-control email','placeholder'=>'Email'))?>
 							<?php $this->newsletter_form->signup->begin(array('class'=>'btn btn-default btn-lg pull-right'))?>
@@ -471,7 +469,7 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-5 col-sm-8 col-xs-12 appscaption">
                             <h2>Our <span>apps</span></h2>
-                            <img src="/theme1/images/dots.png" alt="" />
+                            <img src="/theme1/resources/images/dots.png" alt="" />
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -504,7 +502,7 @@
 
 
                         <h3>Client</h3>
-                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
+                        <a href="#"><img src="/theme1/resources/images/logo-hive.png" alt="" /></a>
 
 
                         <hr>
@@ -517,7 +515,7 @@
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                         <h3 class="clienttalk hidden-sm">Client Talk</h3>
                         <div class="testimonials hidden-sm ">
-                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
+                            <div class="img pull-left"><img src="/theme1/resources/images/client.png" alt="" /></div>
                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                             </div>
                             <div class="clearfix"></div>
@@ -564,9 +562,9 @@
                         <div class="banner" >
                             <ul>
                                  THE FIRST SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/camera-withpad.png">
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/resources/images/camera-withpad.png">
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/resources/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -593,7 +591,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/resources/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -606,7 +604,7 @@
                                          data-speed="300"
                                          data-start="500"
                                          data-easing="easeOutExpo"  >
-                                        <img src="/theme1/images/camera.png" alt="" />
+                                        <img src="/theme1/resources/images/camera.png" alt="" />
 
                                     </div>
 
@@ -635,7 +633,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/resources/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -674,9 +672,9 @@
 
 
                                  THE 2 SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/lock-withpad.png" >
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/resources/images/lock-withpad.png" >
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/resources/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -702,7 +700,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/resources/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -715,7 +713,7 @@
                                          data-speed="600"
                                          data-start="1100"
                                          data-easing="easeOutExpo"  >
-                                        <img src="/theme1/images/lock.png" alt="" />
+                                        <img src="/theme1/resources/images/lock.png" alt="" />
 
                                     </div>
 
@@ -744,7 +742,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/resources/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -784,9 +782,9 @@
 
 
                                  THE 3 SLIDE 
-                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/images/note-withpad.png">
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="300" data-thumb="/theme1/resources/images/note-withpad.png">
                                      THE MAIN IMAGE IN THE SLIDE 
-                                    <img src="/theme1/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
+                                    <img src="/theme1/resources/images/transparent.png" style="background-color:#f5f5f5;"  alt="" >
 
                                      THE CAPTIONS OF THE FIRST SLIDE 
                                     <div class="caption fade leftcol"
@@ -812,7 +810,7 @@
 
 
                                         <h3>Client</h3>
-                                        <a href="#"><img src="/theme1/images/logo-hive.png" alt="" /></a>
+                                        <a href="#"><img src="/theme1/resources/images/logo-hive.png" alt="" /></a>
 
 
                                         <hr>
@@ -825,7 +823,7 @@
                                          data-speed="600"
                                          data-start="1100"
                                          data-easing="easeOutExpo"  >
-                                        <img src="/theme1/images/note.png" alt="" />
+                                        <img src="/theme1/resources/images/note.png" alt="" />
 
                                     </div>
 
@@ -854,7 +852,7 @@
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
                                         <h3 class="clienttalk hidden-sm hidden-xs">Client Talk</h3>
                                         <div class="testimonials hidden-sm hidden-xs">
-                                            <div class="img pull-left"><img src="/theme1/images/client.png" alt="" /></div>
+                                            <div class="img pull-left"><img src="/theme1/resources/images/client.png" alt="" /></div>
                                             <div class="text pull-left"><span>&ldquo;</span> Great company to work with, def looking forward to work with them again. Really impressed after seeing the outcome. I really like this agency.
                                             </div>
                                             <div class="clearfix"></div>
@@ -901,7 +899,7 @@
 
         <!-- meet the team -->
 
-        <div id="meetteam">
+<!--        <div id="meetteam">
             <div class="container">
                 <div class="row">
                     <div class="row teammemebers">
@@ -922,13 +920,13 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4 ">
-                                    <img src="<?=\Rum::baseURI()?>/images/profile.jpg" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/profile.jpg" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
 
-<!--
+
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
@@ -944,19 +942,32 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="/theme1/images/team2.png" alt="" />                                 
+                                    <img src="/theme1/resources/images/team2.png" alt="" />                                 
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
--->
+
 
 
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- END meet the team -->
+
+        <div id="ourapps">
+            <div class="container">                
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5 col-sm-8 col-xs-12 appscaption">
+                            <h2>read<span>me</span></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Download -->
         <div id="download">
@@ -968,7 +979,7 @@
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post1">
                             <h3>License</h3>
                             <p>This software is released under the terms of the gnu lesser general public license.	See /docs/GNU.txt for the complete license.</p>
-							<p><i class="fa fa-user"></i> <a target="_blank" href="<?=\Rum::baseURI()?>/docs/GNU.txt">Download license</a></p>
+							<p><i class="fa fa-user"></i> <a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download license</a></p>
 							<h3>Software disclaimer</h3>
                             <p>Software downloaded from the php.rum web site is provided 'as is' without warranty of any kind, either express or implied. We assume no responsibility for damage, loss of data, or security breaches of any kind. Use at your own risk!</p>
 							
@@ -990,13 +1001,60 @@
                             <h3>Patches &amp; Updates</h3>
 							<div style="clear:left;"></div>
                             <ul>
-                                <li><a href="#">Current stable 6.5 php_rum_v6_6_release.tar (alpha, be warned)</a></li>
-								<li><a href="#">Old stable 6.4 php_rum_v6_5_release.tar (latest stable release)</a></li>
-								<li><a href="#">php_rum_v6_4_release.tar</a></li>
-								<li><a href="#">Older versions</a></li>
-								<li><a href="#">blog_demo.tar</a></li>
-								<li><a href="#">hello_world.tar</a></li>
+                                <li><a href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download Latest Stable Version <?=\Rum::config()->appsettings["current_version_name"]?></a></li>
+								<li><a href="<?=\Rum::baseURI() ?>/downloads/release">Patches &amp; updates for older version</a></li>
+								<li><a href="<?=\Rum::baseURI() ?>/downloads/demo">Sample Applications</a></li>
+								<li><a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">View License</a></li>
                             </ul>
+                        </div>
+
+						<div style="clear:left;margin-top:80px;"></div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>API Docs</a></h3>
+                                    <p><a target="_blank" href="<?=\Rum::baseURI()?>/docs/api">Download</a> the complete API
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <a target="_blank" href="<?=\Rum::baseURI()?>/docs/api"><img src="<?=\Rum::baseURI()?>/resources/images/icons/doc.png" alt="" /></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>User Guide</h3>
+                                    <p><a target="_blank" href="<?=\Rum::baseURI()?>/docs/user-guide">Download</a> the Quick start user guide for installing a hello world app and quick API references
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <a target="_blank" href="<?=\Rum::baseURI()?>/docs/user-guide"><img src="<?=\Rum::baseURI()?>/resources/images/icons/doc.png" alt="" /></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>Examples</h3>
+                                    <p>See some <a target="_blank" href="<?=\Rum::baseURI()?>/docs/examples">examples</a> of basic tasks
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <a target="_blank" href="<?=\Rum::baseURI()?>/docs/examples"><img src="<?=\Rum::baseURI()?>/resources/images/icons/search.png" alt="" /></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1025,8 +1083,9 @@
                 </div>                    
                 <div class="row">
                     <div class="col-lg-offset-1 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-2 col-sm-8 col-xs-12">
-						<?php $this->contact_form->start(array('role'=>'form'))?>
+						<?php $this->contact_form->begin(array('role'=>'form'))?>
 							<?php $this->contact_form->name->render(array('class'=>'form-control namebot','placeholder'=>'Name'))?>
+							<?php $this->name->render(array('class'=>'XXX'))?>
 							<?php $this->contact_form->email->render(array('class'=>'form-control emailbot','placeholder'=>'Email'))?>
 							<?php $this->contact_form->message->render(array('class'=>'form-control','rows'=>'3','placeholder'=>'Message'))?>
 							<?php $this->contact_form->submit->begin(array('class'=>'btn btn-transparent'))?>
@@ -1034,7 +1093,7 @@
 							<?php $this->contact_form->submit->end()?>
                         <?php $this->contact_form->end()?>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
+<!--                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
                         <h3>Social Networks</h3>
                         <div class="botblock sociallinks">
                             <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -1052,16 +1111,10 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="row botline">
                     Copyrights 2014 PHP-rum.com
                 </div>
             </div>
         </div>
-
-	<script>
-		<?php foreach(\Rum::messages() as $message) : ?>
-		Rum.flash('<?=$message->message?>', '<?=$message->type?>');
-		<?php endforeach; ?>
-	</script>

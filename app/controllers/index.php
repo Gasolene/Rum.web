@@ -34,9 +34,12 @@
 			$this->page->newsletter_form->name->addValidator(new \System\Validators\RequiredValidator());
 			$this->page->newsletter_form->email->addValidator(new \System\Validators\RequiredValidator());
 
+			$this->page->contact_form->ajaxPostBack = true;
 			$this->page->contact_form->name->addValidator(new \System\Validators\RequiredValidator());
 			$this->page->contact_form->email->addValidator(new \System\Validators\RequiredValidator());
 			$this->page->contact_form->{'message'}->addValidator(new \System\Validators\RequiredValidator());
+
+			$this->page->add(new \System\Web\WebControls\ValidationMessage('name', $this->contact_form->name));
         }
 
 		/**
