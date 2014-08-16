@@ -139,7 +139,7 @@
                             <li class="active"><a href="#benefits">Core benefits</a></li>
 							<li><a href="#newsletter">Newsletter</a></li>
                             <li><a href="#meetteam">About</a></li>
-                            <li><a href="#ourapps">Docs</a></li>
+                            <li><a href="#download">Docs</a></li>
                             <li><a href="#download">Get rum</a></li>
 							<li><a href="https://github.com/Gasolene/Rum.framework" target="_blank">Contribute</a></li>
                             <li><a href="#contactus">Contact</a></li>
