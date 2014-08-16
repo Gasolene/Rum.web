@@ -44,7 +44,6 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="<?=\Rum::config()->themesURI?>/theme1/js/jquery-2.0.3.min.js"></script>
-        <script src="<?=\Rum::baseURI()?>/resources/jquery-ui/jquery-ui.js"></script>
         <script src="<?=\Rum::config()->themesURI?>/theme1/js/bootstrap.min.js"></script>
         <!-- jQuery REVOLUTION Slider  -->
         <script type="text/javascript" src="<?=\Rum::config()->themesURI?>/theme1/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js"></script>
@@ -65,9 +64,3 @@
 
     </body>
 </html>
-
-<script>
-	<?php foreach(\Rum::messages() as $message) : ?>
-	Rum.flash('<?=$message->message?>', '<?=$message->type?>');
-	<?php endforeach; ?>
-</script>

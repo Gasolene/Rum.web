@@ -24,15 +24,34 @@
                     </div>
                 </div>
             </div>
-			
+        
             <div class="fullscreen-container">
                 <div class="fullscreenbanner">
                     <ul>
 
                         <!-- First slide -->
                         <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-
                             <img src="<?=\Rum::config()->themesURI?>/theme1/images/transparent.png" style="" alt="">
+                            <div class="caption sl_text sfl"
+                                 data-x="71"
+                                 data-y="90"
+                                 data-speed="300"
+                                 data-start="800"
+                                 data-easing="easeOutExpo"  >What is</div>
+
+                            <div class="caption sl_text2 sfr"
+                                 data-x="214"
+                                 data-y="90"
+                                 data-speed="300"
+                                 data-start="800"
+                                 data-easing="easeOutExpo"  >rum?</div>
+
+                            <div class="caption large_text fade"
+                                 data-x="448"
+                                 data-y="105"
+                                 data-speed="500"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo"  ><img src="<?=\Rum::baseURI()?>/resources/images/dots.png" alt="Dots"></div>
 
                             <div class="caption large_text fade"
                                  data-x="448"
@@ -40,7 +59,7 @@
                                  data-speed="500"
                                  data-start="1000"
                                  data-easing="easeOutExpo"  >
-                                 <p>Latest updates</p>
+                                 <p>Here’s my philosophy...</p>
 							</div>
 
                             <div class="caption sfb fade"
@@ -49,26 +68,26 @@
                                  data-speed="500"
                                  data-start="1000"
                                  data-easing="easeOutExpo"
-								 style="white-space: normal !important; padding-right: 20%;">
-
-								<div class="post">
-									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.6.0-alpha is available</h3>
-									<p>Rum 6.6.0-alpha is available, <strong>not</strong> recommended for production applications yet.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_6/php_rum_v6_6_release.tar">Download here</a></p>
-									<p class="author"><i class="fa fa-user"></i> by Darnell on 15/08/2014</p>
-								</div>
-								<div class="post">
-									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.5.11 Released</h3>
-									<p>Security &amp; performance update for version 6.5 released, recommended updating to 6.5.11.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_5/php_rum_v6_5.11.tar">Download update</a></p>
-									<p class="author"><i class="fa fa-user"></i> by Darnell on 06/08/2014</p>
-								</div>
-								<div class="post">
-									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;"><i class="fa fa-exclamation"></i> Rum 6.5.1RC Released</h3>
-									<p>New version 6.5 released, see <a href="https://github.com/Gasolene/Rum.framework/commits/6.5">changelog</a> for details and notes on upgrading from 5.4.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_5/php_rum_v6_5_release.tar">Download here</a></p>
-									<p class="author"><i class="fa fa-user"></i> by Darnell on 21/01/2014</p>
-								</div>
-
-								<button class="btn btn-warning"><a href="#download" style="color:#ffffff;">download rum</a></button>
-
+								 style="white-space: normal !important; padding-right: 20%;"  >
+								<div class="col-xs-7 col-sm-8 col-md-7 col-lg-10 ">
+								 <p>
+									 I’ve spent many years using various web frameworks in many languages and none of them could satisfy my need for a modern HTML5 rapid
+									 development platform.  A tool where I can define the objects and relationships, and have the framework build and map all of the necessary HTML5,
+									 client side JavaScript, and AJAX hooks without sacrificing my ability to extend overwrite and customize the crap out of the the application.
+									 I wanted to tell the framework I have an object, if its updated in the view by a human then update the database.  Simple!  I don't want to write
+									 JavaScript AJAX postbacks then handle them on the server by parsing requests, validating, authenticating, cleaning and updating database objects?
+								 </p>
+								 <p>
+									 I’ve studied architecture of many great frameworks and analyzed what works and I believe I have created just that tool.  The result is pure
+									 semantic HTML5 markup that is 100% jQuery-able.  You place a basic HTML5 element somewhere in the view and extend it’s UI behavior with jQuery.
+									 The HTML5 element then interacts directly with the model to update and interact with any data source without writing any code.  A model can
+									 represent a table, a database record, a form, an array, or just about anything.
+								 </p>
+								 <p>
+									 No routing tables, no complex config/env files, no div containers or special classes.  No validating request arrays, no updating databases
+									 manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.
+								 </p>
+								 </div>
 							</div>
 
                             <div class="caption sfb hidden-xs"
@@ -80,12 +99,7 @@
                                 <div class="sliderblock1">
 
                                     <div class="text pull-left">
-                                        <h2>What is <span>rum</span>?</h2>
-										<p>Rum is a powerful pure semantic HTML5 ajax <br />
-											framework for writing applications and web <br />
-											services combined with integrated <br />
-											deployment &amp; database migration tools</p>
-										<p><a href="#meetteam">Core <span>philosophy</span></a></p>
+                                        <h2>Core <span>philosophy</span></h2>
                                         <hr class="hidden-sm" />
                                     </div>
                                     <div class="clearfix"></div>
@@ -137,10 +151,9 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#benefits">Core benefits</a></li>
 							<li><a href="#newsletter">Newsletter</a></li>
-                            <li><a href="#meetteam">About</a></li>
-                            <li><a href="#ourapps">Docs</a></li>
+                            <li><a href="#download">Docs</a></li>
                             <li><a href="#download">Get rum</a></li>
-							<li><a href="https://github.com/Gasolene/Rum.framework" target="_blank">Contribute</a></li>
+                            <!--<li><a href="#meetteam">About</a></li>-->
                             <li><a href="#contactus">Contact</a></li>
                             <!--
                             <li class="dropdown">
@@ -257,8 +270,8 @@
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Database migrations</h3>
-                                    <p>Maintain multiple versions of database schemas across multiple stage &amp; production servers
+                                    <h3>Write less code</h3>
+                                    <p>No more writing menial repetitive code for handling requests, validating input, preparing SQL queries, and formatting HTML responses
                                     </p>
                                     <hr />
                                 </div>
@@ -273,13 +286,13 @@
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Write less code</h3>
-                                    <p>No more writing menial repetitive code for handling requests, validating input, preparing SQL queries, and formatting HTML responses
+                                    <h3>RESTful</h3>
+                                    <p>Write stateless RESTful web services with clean URLs
                                     </p>
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/pencil.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/webservice.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -289,7 +302,7 @@
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Automated testing &amp; deployment tools</h3>
+                                    <h3>Automated unit testing &amp; deployment tools</h3>
                                     <p>Write automated test &amp; deployment scripts to manager multiple environments over SSH
                                     </p>
                                     <hr />
@@ -887,36 +900,40 @@
 
         <!-- meet the team -->
 
-        <div id="meetteam">
+<!--        <div id="meetteam">
             <div class="container">
                 <div class="row">
                     <div class="row teammemebers">
-                        <h2>Core philosophy</h2>
+                        <h2>About</h2>
 
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
-                                    <h3>Darnell Shinbine</h3>
-                                    <p class="position">Original Creator</p>
+                                    <h3>Darnell <script>document.write('Shinbine');</script></h3>
+                                    <p class="position">Original developer</p>
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden.
+                                    </p>
+                                    <p class="sociallinks">
+                                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4 ">
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/profile.jpg" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
 
-									<p>
-										I’ve spent many years using various web frameworks in many languages and none of them could satisfy my need for a modern HTML5 rapid
-										development platform.  A tool where I can define the objects and relationships, and have the framework build and map all of the necessary HTML5,
-										client side JavaScript, and AJAX hooks without sacrificing my ability to extend overwrite and customize the crap out of the the application.
-										I wanted to tell the framework I have an object, if its updated in the view by a human then update the database.  Simple!  I don't want to write
-										JavaScript AJAX postbacks then handle them on the server by parsing requests, validating, authenticating, cleaning and updating database objects?
-									</p>
-									<p>
-										I’ve studied architecture of many great frameworks and analyzed what works and I believe I have created just that tool.  The result is pure
-										semantic HTML5 markup that is 100% jQuery-able.  You place a basic HTML5 element somewhere in the view and extend it’s UI behavior with jQuery.
-										The HTML5 element then interacts directly with the model to update and interact with any data source without writing any code.  A model can
-										represent a table, a database record, a form, an array, or just about anything.
-									</p>
-									<p>
-										No routing tables, no complex config/env files, no div containers or special classes.  No validating request arrays, no updating databases
-										manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.
-									</p>
 
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="row">
+                                <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
+                                    <h3>William Grewal</h3>
+                                    <p class="position">Manager &amp; Co Founder</p>
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden.
                                     </p>
                                     <p class="sociallinks">
                                         <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -926,18 +943,32 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="<?=\Rum::config()->themesURI?>/theme1/images/team2.png" alt="" />                                 
+                                    <img src="/theme1/resources/images/team2.png" alt="" />                                 
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
 
 
+
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- END meet the team -->
+
+        <div id="ourapps">
+            <div class="container">                
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5 col-sm-8 col-xs-12 appscaption">
+                            <h2>read<span>me</span></h2>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- END meet the team -->
 
         <!-- Download -->
         <div id="download">
@@ -974,9 +1005,7 @@
                                 <li><a href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download Latest Stable Version <?=\Rum::config()->appsettings["current_version_name"]?></a></li>
 								<li><a href="<?=\Rum::baseURI() ?>/downloads/release">Patches &amp; updates for older version</a></li>
 								<li><a href="<?=\Rum::baseURI() ?>/downloads/demo">Sample Applications</a></li>
-								<li><a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download License</a></li>
-								<li><a href="https://github.com/Gasolene/Rum.framework">View project on Github</a></li>
-								
+								<li><a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">View License</a></li>
                             </ul>
                         </div>
 
