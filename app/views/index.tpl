@@ -4,12 +4,12 @@
                     <div class="hidden-xs col-sm-6 col-md-6 col-lg-7 nopadl"><i class="fa fa-envelope bigicon"></i> <span><a href="#contactus">contact me</a></span></div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 nopadr">
                         <div class="icons hidden-xs pull-right">
-<!--                            <a href="#"><i class="fa fa-facebook-square"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-cloud"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>-->
+                            <!--<a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>-->
+                            <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+                            <a href="https://plus.google.com/u/1/+DarnellShinbine/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
+                            <!--<a href="#"><i class="fa fa-cloud"></i></a>-->
+                            <a href="<?=\Rum::baseURI()?>/rss/"><i class="fa fa-rss"></i></a>
 							<a href="#download"><i class="fa fa-download"></i></a>
                         </div>
 <!--                        <div class="search pull-right">
@@ -263,7 +263,7 @@
                                     <hr />
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/pencil.png" alt="" />
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/db.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -919,14 +919,15 @@
 
                                     </p>
                                     <p class="sociallinks">
-                                        <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="https://www.facebook.com/gasolene" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                        <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+                                        <a href="https://plus.google.com/u/1/+DarnellShinbine/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+										<a href="#contactus"><i class="fa fa-mail-reply"></i></a>
                                     </p>
                                     <hr />
                                 </div>
                                 <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
-                                    <img src="<?=\Rum::config()->themesURI?>/theme1/images/team2.png" alt="" />                                 
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/profile.png" alt="" style="height:170px;width:170px;" />                                 
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -1057,7 +1058,6 @@
                     <div class="col-lg-offset-1 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-2 col-sm-8 col-xs-12">
 						<?php $this->contact_form->begin(array('role'=>'form'))?>
 							<?php $this->contact_form->name->render(array('class'=>'form-control namebot','placeholder'=>'Name'))?>
-							<?php $this->name->render(array('class'=>'XXX'))?>
 							<?php $this->contact_form->email->render(array('class'=>'form-control emailbot','placeholder'=>'Email'))?>
 							<?php $this->contact_form->message->render(array('class'=>'form-control','rows'=>'3','placeholder'=>'Message'))?>
 							<?php $this->contact_form->submit->begin(array('class'=>'btn btn-transparent'))?>
@@ -1065,25 +1065,25 @@
 							<?php $this->contact_form->submit->end()?>
                         <?php $this->contact_form->end()?>
                     </div>
-<!--                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col3">
                         <h3>Social Networks</h3>
                         <div class="botblock sociallinks">
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-cloud"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
+                            <a href="https://www.facebook.com/gasolene" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                            <!--<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>-->
+                            <a href="https://plus.google.com/u/1/+DarnellShinbine/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <!--<a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>-->
+                            <!--<a href="#" target="_blank"><i class="fa fa-cloud"></i></a>-->
+                            <a href="<?=\Rum::baseURI()?>/rss/" target="_blank"><i class="fa fa-rss"></i></a>
                         </div>
-                        <h3>Add us on Skype</h3>
+                        <h3>Add me on Skype</h3>
                         <div class="botblock">
                             <div class="pull-left"><i class="fa fa-skype"></i></div>
                             <div class="pull-left text">
-                                <p>Skype_name_here</p>
+                                <p>darnell.shinbine</p>
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="row botline">
                     Copyrights 2014 PHP-rum.com
