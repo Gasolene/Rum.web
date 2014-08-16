@@ -9,6 +9,7 @@
                             <a href="https://plus.google.com/u/1/+DarnellShinbine/about" target="_blank"><i class="fa fa-google-plus"></i></a>
                             <!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
                             <!--<a href="#"><i class="fa fa-cloud"></i></a>-->
+							<a href="https://github.com/Gasolene/Rum.framework" target="_blank"><i class="fa fa-github-alt"></i></a>
                             <a href="<?=\Rum::baseURI()?>/rss/"><i class="fa fa-rss"></i></a>
 							<a href="#download"><i class="fa fa-download"></i></a>
                         </div>
@@ -950,7 +951,7 @@
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 post1">
                             <h3>License</h3>
                             <p>This software is released under the terms of the gnu lesser general public license.	See /docs/GNU.txt for the complete license.</p>
-							<p><i class="fa fa-user"></i> <a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download license</a></p>
+							<p><i class="fa fa-file-text-o"></i> <a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download license</a></p>
 							<h3>Software disclaimer</h3>
                             <p>Software downloaded from the php.rum web site is provided 'as is' without warranty of any kind, either express or implied. We assume no responsibility for damage, loss of data, or security breaches of any kind. Use at your own risk!</p>
 							
@@ -972,11 +973,11 @@
                             <h3>Patches &amp; Updates</h3>
 							<div style="clear:left;"></div>
                             <ul>
-                                <li><a href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download Latest Stable Version <?=\Rum::config()->appsettings["current_version_name"]?></a></li>
-								<li><a href="<?=\Rum::baseURI() ?>/downloads/release">Patches &amp; updates for older version</a></li>
-								<li><a href="<?=\Rum::baseURI() ?>/downloads/demo">Sample Applications</a></li>
-								<li><a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download License</a></li>
-								<li><a href="https://github.com/Gasolene/Rum.framework">View project on Github</a></li>
+                                <li><i class="fa fa-download"></i> <a href="<?=\Rum::baseURI() ?>/downloads/release/<?=\Rum::config()->appsettings["current_version"]?>/php_rum_v<?=\Rum::config()->appsettings["current_version"]?>_release.tar">Download Latest Stable Version <?=\Rum::config()->appsettings["current_version_name"]?></a></li>
+								<li><i class="fa fa-archive"></i> <a href="<?=\Rum::baseURI() ?>/downloads/release">Patches &amp; updates for older version</a></li>
+								<li><i class="fa fa-download"></i> <a href="<?=\Rum::baseURI() ?>/downloads/demo">Sample Applications</a></li>
+								<li><i class="fa fa-file"></i> <a href="<?=\Rum::baseURI()?>/docs/GNU.txt" download="GNU.txt">Download License</a></li>
+								<li><i class="fa fa-github"></i> <a href="https://github.com/Gasolene/Rum.framework">View project on Github</a></li>
 								
                             </ul>
                         </div>
