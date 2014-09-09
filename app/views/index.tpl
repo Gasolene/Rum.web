@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-			
+
             <div class="fullscreen-container">
                 <div class="fullscreenbanner">
                     <ul>
@@ -896,7 +896,7 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="row">
-                                <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 teamdesc">
+                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 teamdesc">
                                     <h3>Darnell Shinbine</h3>
                                     <p class="position">Original Creator</p>
 
@@ -927,7 +927,7 @@
                                     </p>
                                     <hr />
                                 </div>
-                                <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 ">
+                                <div class="col-xs-5 col-sm-4 col-lg-4 col-md-5 hidden-xs hidden-sm">
                                     <img src="<?=\Rum::baseURI()?>/resources/images/profile.png" alt="" style="height:170px;width:170px;" />                                 
                                 </div>
                                 <div class="clearfix"></div>
