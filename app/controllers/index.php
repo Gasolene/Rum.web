@@ -28,8 +28,8 @@
 			$this->page->contact_form->add(new \System\Web\WebControls\TextArea('message'));
 			$this->page->contact_form->add(new \System\Web\WebControls\Button('submit'));
 
-//			$this->page->newsletter_form->honeyPot = 'body';
-//			$this->page->contact_form->honeyPot = 'body';
+			$this->page->newsletter_form->honeyPot = 'body';
+			$this->page->contact_form->honeyPot = 'body';
 
 			$this->page->newsletter_form->name->addValidator(new \System\Validators\RequiredValidator());
 			$this->page->newsletter_form->email->addValidator(new \System\Validators\RequiredValidator());
@@ -44,7 +44,7 @@
 		 * @param object $sender
 		 * @param array $args
 		 */
-		public function onSignupAjaxClick($sender, $args)
+		public function onNewsletter_FormAjaxPost($sender, $args)
 		{
 			\Rum::trace('signup clicked');
 
@@ -81,7 +81,7 @@
 		 * @param object $sender
 		 * @param array $args
 		 */
-		public function onSubmitAjaxClick($sender, $args)
+		public function onContact_FormAjaxPost($sender, $args)
 		{
 			\Rum::trace('submit clicked');
 
