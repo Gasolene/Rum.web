@@ -77,11 +77,11 @@
 		 */
 		public function __set( $field, $value ) {
 			if( $field === 'controlToValidate' ) {
-				if(1) {
+				if($value instanceof InputBase) {
 					$this->controlToValidate = $value;
 				}
 				else {
-					
+					throw new \System\Base\BadMemberCallException("controlToValidate must be type InputBase");
 				}
 			}
 			else {
@@ -104,6 +104,35 @@
 				}
 				$this->needsUpdating = true;
 			}
+		}
+
+
+		/**
+		 * renders form open tag
+		 *
+		 * @param   array	$args	attribute parameters
+		 * @return void
+		 */
+		public function begin( $args = array() )
+		{
+			$span = $this->createDomObject( 'span' );
+			$span->setAttribute('id', $this->getHTMLControlId());
+			if(!$this->errMsg) {
+				$span->setAttribute('style', 'display:none;');
+			}
+
+			\System\Web\HTTPResponse::write(str_replace( '</span>', '', $span->fetch($args)));
+		}
+
+
+		/**
+		 * renders form close tag
+		 *
+		 * @return void
+		 */
+		public function end()
+		{
+			\System\Web\HTTPResponse::write( '</span>' );
 		}
 
 
