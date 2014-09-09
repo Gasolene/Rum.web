@@ -242,8 +242,24 @@
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
+                                    <h3>Write less code</h3>
+                                    <p>No more writing menial repetitive code for handling requests, validating input, preparing SQL queries, and formatting HTML responses
+                                    </p>
+                                    <hr />
+                                </div>
+                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
+                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/pencil.png" alt="" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
                                     <h3>Rapid prototyping</h3>
-                                    <p>I mean rapid.  Create a full featured responsive AJAX blog in less than 20 lines of code
+                                    <p>Define an object and attach it to an HTML5 control, All interactions between humans and objects are automatically handled for extreme speed
                                     </p>
                                     <hr />
                                 </div>
@@ -265,22 +281,6 @@
                                 </div>
                                 <div class="col-xs-3 col-sm-4 col-md-3  col-lg-3 benefiticon">
                                     <img src="<?=\Rum::baseURI()?>/resources/images/icons/db.png" alt="" />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="row">
-                                <div class="col-xs-9 col-sm-8 col-md-9 col-lg-9 benefitdesc">
-                                    <h3>Write less code</h3>
-                                    <p>No more writing menial repetitive code for handling requests, validating input, preparing SQL queries, and formatting HTML responses
-                                    </p>
-                                    <hr />
-                                </div>
-                                <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 benefiticon">
-                                    <img src="<?=\Rum::baseURI()?>/resources/images/icons/pencil.png" alt="" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -901,24 +901,24 @@
                                     <p class="position">Original Creator</p>
 
 									<p>
-										I’ve spent many years using various web frameworks in many languages and none of them could satisfy my need for a modern HTML5 rapid
+										I’ve spent many years using various web frameworks in many languages and none of them could satisfy my need for a fast HTML5 rapid
 										development platform.  A tool where I can define the objects and relationships, and have the framework build and map all of the necessary HTML5,
 										client side JavaScript, and AJAX hooks without sacrificing my ability to extend overwrite and customize the crap out of the the application.
 										I wanted to tell the framework I have an object, if its updated in the view by a human then update the database.  Simple!  I don't want to write
 										JavaScript AJAX postbacks then handle them on the server by parsing requests, validating, authenticating, cleaning and updating database objects?
 									</p>
 									<p>
-										I’ve studied architecture of many great frameworks and analyzed what works and I believe I have created just that tool.  The result is pure
-										semantic HTML5 markup that is 100% jQuery-able.  You place a basic HTML5 element somewhere in the view and extend it’s UI behavior with jQuery.
-										The HTML5 element then interacts directly with the model to update and interact with any data source without writing any code.  A model can
-										represent a table, a database record, a form, an array, or just about anything.
+										I’ve studied architecture of many great frameworks and decided to take what I have learned and create just that tool.  The result is pure
+										semantic HTML5 markup that is 100% jQuery-able.  You place a basic HTML5 element somewhere in the view using PHP tags and extend it’s UI behavior 
+										with jQuery.  The HTML5 element then interacts directly with the human and model to display, update and interact with any data source without 
+										writing any code.  A model can represent a table, a database record, a form, an array, or just about anything.  Of course you can extend/replace 
+										any object, model or HTML5 element and insert custom behavior.
 									</p>
 									<p>
 										No routing tables, no complex config/env files, no div containers or special classes.  No validating request arrays, no updating databases
 										manually, no writing JavaScript AJAX hooks, no handling AJAX callbacks, No more ugly controllers.
 									</p>
 
-                                    </p>
                                     <p class="sociallinks">
                                         <a href="https://www.facebook.com/gasolene" target="_blank"><i class="fa fa-facebook-square"></i></a>
                                         <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
