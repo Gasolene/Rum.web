@@ -53,6 +53,11 @@
 								 style="white-space: normal !important; padding-right: 20%;">
 
 								<div class="post">
+									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.5.12 Released</h3>
+									<p>Security performance &amp; stability update for version 6.5 released, recommended updating to 6.5.12.  <a href="<?=\Rum::baseURI()?>/#download">Download update</a></p>
+									<p class="author"><i class="fa fa-user"></i> by Darnell on 08/10/2014</p>
+								</div>
+								<div class="post">
 									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.6.0-alpha is available</h3>
 									<p>Rum 6.6.0-alpha is available, <strong>not</strong> recommended for production applications yet.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_6/php_rum_v6_6_release.tar">Download here</a></p>
 									<p class="author"><i class="fa fa-user"></i> by Darnell on 15/08/2014</p>
