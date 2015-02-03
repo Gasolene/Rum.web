@@ -57,7 +57,7 @@
 			$item->author = "Darnell Shinbine";
 			$item->guid = "5";
 			$item->title = "Rum 6.5.19 Released";
-			$item->description = "Security &amp; performance update for version 6.5 released, recommended updating to 6.5.11";
+			$item->description = "Security &amp; performance update for version 6.5 released, recommended updating to 6.5.19";
 			$item->pubDate = "2015-02-03";
 			$item->link = \Rum::url('index') . '#download';
 			$feed->addItem($item);
