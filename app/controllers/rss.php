@@ -53,6 +53,24 @@
 			$item->link = \Rum::url('index') . '#download';
 			$feed->addItem($item);
 
+			$item = new \RSS\RSSItem();
+			$item->author = "Darnell Shinbine";
+			$item->guid = "5";
+			$item->title = "Rum 6.5.19 Released";
+			$item->description = "Security &amp; performance update for version 6.5 released, recommended updating to 6.5.11";
+			$item->pubDate = "2015-02-03";
+			$item->link = \Rum::url('index') . '#download';
+			$feed->addItem($item);
+
+			$item = new \RSS\RSSItem();
+			$item->author = "Darnell Shinbine";
+			$item->guid = "6";
+			$item->title = "Rum 6.6.1RC Released";
+			$item->description = "New version 6.6 released, see <a href=\"https://github.com/Gasolene/Rum.framework/commits/6.6\">changelog</a> for details and notes on upgrading from 6.5.  ";
+			$item->pubDate = "2015-02-03";
+			$item->link = \Rum::url('index') . '#download';
+			$feed->addItem($item);
+
 			$view = new \System\Web\WebControls\View('rss');
 			$view->contentType = 'text/xml';
 			$view->setData($feed->getRSSFeed());
