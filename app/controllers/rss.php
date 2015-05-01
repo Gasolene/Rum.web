@@ -66,8 +66,26 @@
 			$item->author = "Darnell Shinbine";
 			$item->guid = "6";
 			$item->title = "Rum 6.6.1RC Released";
-			$item->description = "New version 6.6 released, see <a href=\"https://github.com/Gasolene/Rum.framework/commits/6.6\">changelog</a> for details and notes on upgrading from 6.5.  ";
+			$item->description = "New version 6.6 released, see <a href=\"https://github.com/Gasolene/Rum.framework/commits/6.5\">changelog</a> for details and notes on upgrading from 6.5.  ";
 			$item->pubDate = "2015-02-03";
+			$item->link = \Rum::url('index') . '#download';
+			$feed->addItem($item);
+
+			$item = new \RSS\RSSItem();
+			$item->author = "Darnell Shinbine";
+			$item->guid = "7";
+			$item->title = "Rum 6.5.20 Released";
+			$item->description = "Security &amp; performance update for version 6.5 released, recommended updating to 6.5.20";
+			$item->pubDate = "2015-04-21";
+			$item->link = \Rum::url('index') . '#download';
+			$feed->addItem($item);
+
+			$item = new \RSS\RSSItem();
+			$item->author = "Darnell Shinbine";
+			$item->guid = "8";
+			$item->title = "Rum 6.6.3 Released";
+			$item->description = "Security &amp; performance update for version 6.5 released, see <a href=\"https://github.com/Gasolene/Rum.framework/commits/6.5\">changelog</a> for details and notes on upgrading from 6.5.  ";
+			$item->pubDate = "2015-05-01";
 			$item->link = \Rum::url('index') . '#download';
 			$feed->addItem($item);
 

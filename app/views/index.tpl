@@ -53,19 +53,19 @@
 								 style="white-space: normal !important; padding-right: 20%;">
 
 								<div class="post">
+									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;"><i class="fa fa-exclamation"></i> Rum 6.6.3 released</h3>
+									<p>Security &amp; performance update for version 6.6 released, see <a href="https://github.com/Gasolene/Rum.framework/commits/6.5">changelog</a> for details and notes on upgrading from 6.5.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_6/php_rum_v6_6_release.tar">Download here</a></p>
+									<p class="author"><i class="fa fa-user"></i> by Darnell on 05/01/2015</p>
+								</div>
+								<div class="post">
+									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.5.20 released</h3>
+									<p>Security &amp; performance update for version 6.5 released, recommended updating to 6.5.20.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_5/php_rum_v6_5_release.tar">Download update</a></p>
+									<p class="author"><i class="fa fa-user"></i> by Darnell on 04/21/2015</p>
+								</div>
+								<div class="post">
 									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;"><i class="fa fa-exclamation"></i> Rum 6.6.1RC released</h3>
 									<p>New version 6.6 released, see <a href="https://github.com/Gasolene/Rum.framework/commits/6.5">changelog</a> for details and notes on upgrading from 6.5.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_6/php_rum_v6_6_release.tar">Download here</a></p>
 									<p class="author"><i class="fa fa-user"></i> by Darnell on 03/02/2015</p>
-								</div>
-								<div class="post">
-									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.5.19 released</h3>
-									<p>Security &amp; performance update for version 6.5 released, recommended updating to 6.5.19.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_5/php_rum_v6_5_release.tar">Download update</a></p>
-									<p class="author"><i class="fa fa-user"></i> by Darnell on 03/02/2015</p>
-								</div>
-								<div class="post">
-									<h3 style="border-bottom:1px solid #e07771;font-size:18px;margin-bottom:6px;">Rum 6.6.0-alpha is available</h3>
-									<p>Rum 6.6.0-alpha is available, <strong>not</strong> recommended for production applications yet.  <a href="<?=\Rum::baseURI()?>/downloads/release/6_6/php_rum_v6_6_release.tar">Download here</a></p>
-									<p class="author"><i class="fa fa-user"></i> by Darnell on 15/08/2014</p>
 								</div>
 
 								<button class="btn btn-warning"><a href="#download" style="color:#ffffff;">download rum</a></button>
