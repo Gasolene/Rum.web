@@ -1,0 +1,142 @@
+<!--/*--><![CDATA[/*><!--*/
+
+#doc {
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  width: 990px;
+  background-color: #ffffff;
+  background-image: url(images/header.gif);
+  background-repeat: repeat-x;
+}
+
+#header {
+  height: 114px;
+  background-image: url(images/logo.gif);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: relative;
+}
+
+#search .textbox {
+  display: block;
+  float: left;
+  width: 260px;
+  height: 21px;
+  padding: 2px;
+  font-size: 14px;
+  line-height: 25px;
+  background-color: #ffffff;
+  border: 1px solid #61890C;
+  color: #9CBB42;
+}
+
+#search .button {
+  display: block;
+  float: left;
+  height: 27px;
+  line-height: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 10px;
+  background-color: #9CBB42;
+  border:1px solid #61890C;
+  color: #ffffff;
+  overflow:visible;
+}
+
+#search .button:hover {
+  background-color: #61890C;
+  cursor: pointer;
+}
+
+#top_menu {
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+  height: 29px;
+  margin-top: 49px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  list-style: none;
+}
+
+#top_menu li {
+  display: block;
+  float: left;
+}
+
+#top_menu li a {
+  display: block;
+  width: 100px;
+  height: 29px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 29px;
+  font-size: 14px;
+  color: #95BD17;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#top_menu li a:hover {
+  background-color: #61890C;
+  color: #ffffff;
+}
+
+#body {
+  padding: 10px;
+}
+
+#side_bar {
+  float: left;
+  width: 166px;
+  margin-bottom: 0px;
+}
+
+#side_menu {
+  list-style: none;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+#side_menu li {
+  padding: 0px !important;
+}
+
+#side_menu li a {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  padding-top: 13px;
+  padding-left: 10px;
+  margin-bottom: 1px;
+  background-color: #95BD17;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+#side_menu li a:hover {
+  background-color: #B8E31C;
+  color: #61890C;
+}
+
+#content {
+  margin-left: 186px;
+}
+
+#footer {
+  clear: both;
+  width: 970px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  border-top: 1px solid;
+  text-align: right;
+}
+
+/*]]>*/-->
