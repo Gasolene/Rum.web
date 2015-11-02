@@ -8,7 +8,7 @@
  @lang (default=en): the default language of the application
  @charset (default=utf-8): the default charset of the application
 -->
-<application                   state = "debug"
+<application                   state = "on"
                                 lang = "en">
 
   <!--
