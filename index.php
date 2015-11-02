@@ -16,7 +16,7 @@
 	/**
 	 * load framework and application
 	 */
-	include '../system/base/rum.php';
+	include 'system/base/rum.php';
 
 	// create instance of the application and run!!!
 	\System\Base\ApplicationBase::getInstance(new Main())->run();
