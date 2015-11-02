@@ -20,13 +20,13 @@
 	class Prod extends \System\Deploy\DeploymentBase
 	{
 		// server name
-		protected $server="shinbine.com";
-		// optional port
-		protected $port=2222;
+		protected $server="php-rum.com";
 		// username
-		protected $username="root";
+		protected $username="phprum_admin";
+		// password
+		protected $password="JjdbW2mz";
 		// remote home path
-		protected $home_path="/var/www/html/php-rum.com";
+		protected $home_path="/home/phprum_admin";
 		// local/svn repository
 		protected $repository_path="git@github.com:Gasolene/Rum.web.git";
 		// remote env
@@ -70,7 +70,7 @@
 			$this->run("mkdir {$this->release_path}/.build");
 			$this->run("chmod 775 {$this->release_path}/.cache");
 			$this->run("chmod 775 {$this->release_path}/.build");
-			$this->run("chown apache:apache {$this->home_path} -R");
+//			$this->run("chown apache:apache {$this->home_path} -R");
 
 			// perform database migrations
 			$this->run("php {$this->release_path}/migrate {$this->env}");
@@ -80,8 +80,8 @@
 			$this->run("ln -s {$this->home_path}/shared/logs {$this->release_path}/logs");
 
 			// sym link to current
-			$this->run("unlink {$this->home_path}/current");
-			$this->run("ln -s {$this->release_path} {$this->home_path}/current");
+			$this->run("unlink {$this->home_path}/php-rum.com");
+			$this->run("ln -s {$this->release_path} {$this->home_path}/php-rum.com");
 
 			// cleanup
 			$this->cleanup();
@@ -106,8 +106,8 @@
 			$this->run("rm -f {$release_path}/migrate");
 
 			// sym link to current
-			$this->run("unlink {$this->home_path}/current");
-			$this->run("ln -s {$release_path} {$this->home_path}/current");
+			$this->run("unlink {$this->home_path}/php-rum.com");
+			$this->run("ln -s {$release_path} {$this->home_path}/php-rum.com");
 		}
 
 
