@@ -19,11 +19,11 @@
   -->
   <app-settings>
     <add                         key = "min_php_ver"
-                               value = "5.3.8" />
+                               value = "7.0.6" />
     <add                         key = "current_version"
-                               value = "6_6" />
+                               value = "7_1" />
     <add                         key = "current_version_name"
-                               value = "6.6" />
+                               value = "7.1" />
     <add                         key = "admin_email"
                                value = "gasolene@gmail.com" />
   </app-settings>
