@@ -102,6 +102,16 @@
 					'link' => \Rum::url('index') . '#download',
 					'icon' => 'fa-download',
 				),
+				array(
+					'author' => "Darnell Shinbine",
+					'guid' => "10",
+					'title' => "Rum 7.1.0 is available with support for PHP 7.0.6",
+					'description' => "Rum 7.1.0 is available with support for PHP 7.0.6.",
+					'html' => "Rum 7.1.0 is available with support for PHP 7.0.6.",
+					'pubDate' => "2016-04-31",
+					'link' => \Rum::url('index') . '#download',
+					'icon' => 'fa-exclamation',
+				),
 			);
 		}
 	}
